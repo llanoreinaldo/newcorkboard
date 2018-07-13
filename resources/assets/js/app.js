@@ -19,3 +19,5 @@ require('./components/Pimg3');
 require('./components/Section1');
 require('./components/Section2');
 require('./components/Section3');
+require('./components/InviteModal');
+require('./components/ErrorModal');
