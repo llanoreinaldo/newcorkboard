@@ -13,4 +13,9 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
+require('./components/Pimg1');
+require('./components/Pimg2');
+require('./components/Pimg3');
+require('./components/Section1');
+require('./components/Section2');
+require('./components/Section3');
