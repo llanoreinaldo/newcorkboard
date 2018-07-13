@@ -16,5 +16,5 @@ export default class Pimg3 extends Component {
 }
 
 if (document.getElementById('pimg3')) {
-    ReactDOM.render(<Example />, document.getElementById('pimg3'));
+    ReactDOM.render(<Pimg3 />, document.getElementById('pimg3'));
 }

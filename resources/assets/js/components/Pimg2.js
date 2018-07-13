@@ -16,5 +16,5 @@ export default class Pimg2 extends Component {
 }
 
 if (document.getElementById('pimg2')) {
-    ReactDOM.render(<Example />, document.getElementById('pimg2'));
+    ReactDOM.render(<Pimg2 />, document.getElementById('pimg2'));
 }

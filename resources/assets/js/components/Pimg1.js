@@ -14,5 +14,5 @@ export default class Pimg1 extends Component {
     }
     
 if (document.getElementById('pimg1')) {
-                    ReactDOM.render(< Example />, document.getElementById('pimg1'));
+                    ReactDOM.render(<Pimg1 />, document.getElementById('pimg1'));
                 }
