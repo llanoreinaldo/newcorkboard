@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-<!-- This section needs to load welcome page with board lists -->
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
