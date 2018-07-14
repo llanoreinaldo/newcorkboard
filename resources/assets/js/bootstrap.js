@@ -1,5 +1,5 @@
 
-window._ = require('../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/lodash');
+window._ = require('lodash');
 window.Popper = require('popper.js').default;
 
 /**
@@ -11,7 +11,7 @@ window.Popper = require('popper.js').default;
 try {
     window.$ = window.jQuery = require('jquery');
 
-    require('../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/bootstrap');
+    require('bootstrap');
 } catch (e) {}
 
 /**
@@ -44,13 +44,13 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
-import Echo from 'laravel-echo'
+// import Echo from 'laravel-echo'
 
-window.Pusher = require('../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/pusher-js');
+// window.Pusher = require('./node_modules/@types/pusher-js');
 
-window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: process.env.MIX_PUSHER_APP_KEY,
-    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-    encrypted: true
-});
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     encrypted: true
+// });
