@@ -14148,14 +14148,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 
 __webpack_require__(20);
-// require('./components/Pimg1');
-// require('./components/Pimg2');
-// require('./components/Pimg3');
-// require('./components/Section1');
-// require('./components/Section2');
-// require('./components/Section3');
-// require('./components/InviteModal');
-// require('./components/ErrorModal');
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -56117,22 +56109,22 @@ var Section3 = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'a',
                     { href: 'mailto:corkboard062018@gmail.com?subject=Cork%20Board&', target: '_top' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fa fa-envelope fa-fw', 'aria-hidden': 'true' })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-envelope fa-fw', 'aria-hidden': 'true' })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'a',
                     { href: 'tel:+1-407-577-7607' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fa fa-phone-square fa-fw', 'aria-hidden': 'true' })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-phone-square fa-fw', 'aria-hidden': 'true' })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'a',
                     { href: 'https://www.linkedin.com/company/projectcodex/' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fa fa-linkedin-square fa-fw', 'aria-hidden': 'true' })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-linkedin-square fa-fw', 'aria-hidden': 'true' })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'a',
                     { href: 'https://www.facebook.com/projectcodex2018/' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fa fa-facebook-official fa-fw', 'aria-hidden': 'true' })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-facebook-official fa-fw', 'aria-hidden': 'true' })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
