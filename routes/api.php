@@ -30,11 +30,11 @@ Route::post('links', function(Request $request) {
     $resp = Link::create($request->all());
 });
  
-// Route::put('links/{link}', function(Request, $request, $linkId) {
-//     $link = Link::findOrFail($linkId);
-//     $link->update($request->all());
-//     return $link;
-// });
+Route::put('links/{link}', function(Request $request, $linkId) {
+    $link = Link::findOrFail($linkId);
+    $link->update($request->all());
+    return $link;
+});
  
 Route::delete('links/{link}',function($linkId) {
     Link::find($linkId)->delete();
