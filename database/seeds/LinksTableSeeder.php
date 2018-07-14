@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Seeder;
 use App\Link;
  
@@ -14,7 +15,7 @@ class LinksTableSeeder extends Seeder
             Link::create([
                 'url' => $faker->url,
                 'title' => $faker->title,
-                'description' => $faker->text,
+                'description' => $faker->text,  
                 'image_url' => $faker->image
             ]);
         }
