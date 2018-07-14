@@ -6,7 +6,7 @@ export default class Pimg3 extends Component {
         return (
             <div className="pimg3" >
                 <div className="ptext">
-                    <span class="border trans">
+                    <span className="border trans">
                         Collaborate
                     </span>
                 </div>

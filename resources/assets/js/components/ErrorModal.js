@@ -6,7 +6,7 @@ export default class ErrorModal extends Component {
         return (
             // < !--modal for incorrect board inputs-- >
 
-            <div className="modal" tabindex="-1" role="dialog" id="errorModal">
+            <div className="modal" tabIndex="-1" role="dialog" id="errorModal">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -19,7 +19,7 @@ export default class ErrorModal extends Component {
                             <p id="errModalText"></p>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>

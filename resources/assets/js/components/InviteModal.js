@@ -5,7 +5,7 @@ export default class InviteModal extends Component {
     render() {
         return (
             // <!--Modal that Displays URL and Sends E-mail Invite -->
-            <div className="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteModal" aria-hidden="true">
+            <div className="modal fade" id="inviteModal" tabIndex="-1" role="dialog" aria-labelledby="inviteModal" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -16,11 +16,11 @@ export default class InviteModal extends Component {
                         <div className="modal-body">
                             <form>
                                 <div className="form-group">
-                                    <label for="recipient-name" className="col-form-label">Send Invites To Your Board: (Use a Comma to Send to Multiple Email Address)</label>
+                                    <label htmlFor="recipient-name" className="col-form-label">Send Invites To Your Board: (Use a Comma to Send to Multiple Email Address)</label>
                                     <input type="email" className="form-control" id="inviteEmails" required="required" placeholder="name@example.com, name2@example.com" multiple></input>
                                 </div>
                                 <div className="form-group">
-                                    <label for="message-text" className="col-form-label">Message:</label>
+                                    <label htmlFor="message-text" className="col-form-label">Message:</label>
                                     <textarea className="form-control" id="inviteEmailMsg"></textarea>
                                 </div>
                             </form>
