@@ -6,6 +6,14 @@
  */
 
 require('./bootstrap');
+// require('./components/Pimg1');
+// require('./components/Pimg2');
+// require('./components/Pimg3');
+// require('./components/Section1');
+// require('./components/Section2');
+// require('./components/Section3');
+// require('./components/InviteModal');
+// require('./components/ErrorModal');
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -13,11 +21,11 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Pimg1');
-require('./components/Pimg2');
-require('./components/Pimg3');
-require('./components/Section1');
-require('./components/Section2');
-require('./components/Section3');
-require('./components/InviteModal');
-require('./components/ErrorModal');
+import Pimg1 from './components/Pimg1';
+import Pimg2 from './components/Pimg2';
+import Pimg3 from './components/Pimg3';
+import Section1 from './components/Section1';
+import Section2 from './components/Section2';
+import Section3 from './components/Section3';
+import InviteModal from './components/InviteModal';
+import ErrorModal from './components/ErrorModal';
