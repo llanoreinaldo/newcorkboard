@@ -18,6 +18,7 @@ class CreateMessagesTable extends Migration
             $table->timestamps();
             $table->string('msg');
             $table->string('author');
+
         });
     }
 
