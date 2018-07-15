@@ -6,14 +6,6 @@
  */
 
 require('./bootstrap');
-// require('./components/Pimg1');
-// require('./components/Pimg2');
-// require('./components/Pimg3');
-// require('./components/Section1');
-// require('./components/Section2');
-// require('./components/Section3');
-// require('./components/InviteModal');
-// require('./components/ErrorModal');
 
 /**
  * Next, we will create a fresh React component instance and attach it to

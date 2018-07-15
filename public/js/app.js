@@ -14148,14 +14148,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 
 __webpack_require__(20);
-// require('./components/Pimg1');
-// require('./components/Pimg2');
-// require('./components/Pimg3');
-// require('./components/Section1');
-// require('./components/Section2');
-// require('./components/Section3');
-// require('./components/InviteModal');
-// require('./components/ErrorModal');
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -55893,7 +55885,7 @@ var Pimg3 = function (_Component) {
                     { className: 'ptext' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'span',
-                        { 'class': 'border trans' },
+                        { className: 'border trans' },
                         'Collaborate'
                     )
                 )
@@ -55967,14 +55959,14 @@ var Section1 = function (_Component) {
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
-                                { 'class': 'col-4-md col-12-xs' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { 'class': 'new-item form-control', pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$', placeholder: 'Your Email', type: 'email',
+                                { className: 'col-4-md col-12-xs' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'new-item form-control', pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$', placeholder: 'Your Email', type: 'email',
                                     id: 'ownerEmail', required: 'required' })
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
-                                { 'class': 'col-4-md col-12-xs' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { value: 'Create new Board', type: 'submit', 'class': 'btn btn-primary', 'data-toggle': 'modal', id: 'createBoard' })
+                                { className: 'col-4-md col-12-xs' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { value: 'Create New Board', type: 'submit', className: 'btn btn-primary', 'data-toggle': 'modal', id: 'createBoard' })
                             )
                         )
                     )
@@ -56027,7 +56019,7 @@ var Section2 = function (_Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'section',
-                { 'class': 'section section-dark' },
+                { className: 'section section-dark' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h2',
                     null,
@@ -56100,13 +56092,28 @@ var Section3 = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'a',
                     { href: 'mailto:corkboard062018@gmail.com?subject=Cork%20Board&', target: '_top' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fas fa-envelope' })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-envelope fa-fw', 'aria-hidden': 'true' })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'a',
+                    { href: 'tel:+1-407-577-7607' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-phone-square fa-fw', 'aria-hidden': 'true' })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'a',
+                    { href: 'https://www.linkedin.com/company/projectcodex/' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-linkedin-square fa-fw', 'aria-hidden': 'true' })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'a',
+                    { href: 'https://www.facebook.com/projectcodex2018/' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-facebook-official fa-fw', 'aria-hidden': 'true' })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'p',
                     null,
-                    'bAll Rights Reserved. \xA9 Cork Board 2018'
+                    'All Rights Reserved. \xA9 Cork Board 2018'
                 )
             );
         }
@@ -56158,7 +56165,7 @@ var InviteModal = function (_Component) {
                 // <!--Modal that Displays URL and Sends E-mail Invite -->
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'modal fade', id: 'inviteModal', tabindex: '-1', role: 'dialog', 'aria-labelledby': 'inviteModal', 'aria-hidden': 'true' },
+                    { className: 'modal fade', id: 'inviteModal', tabIndex: '-1', role: 'dialog', 'aria-labelledby': 'inviteModal', 'aria-hidden': 'true' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'modal-dialog', role: 'document' },
@@ -56185,7 +56192,7 @@ var InviteModal = function (_Component) {
                                         { className: 'form-group' },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             'label',
-                                            { 'for': 'recipient-name', className: 'col-form-label' },
+                                            { htmlFor: 'recipient-name', className: 'col-form-label' },
                                             'Send Invites To Your Board: (Use a Comma to Send to Multiple Email Address)'
                                         ),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'email', className: 'form-control', id: 'inviteEmails', required: 'required', placeholder: 'name@example.com, name2@example.com', multiple: true })
@@ -56195,7 +56202,7 @@ var InviteModal = function (_Component) {
                                         { className: 'form-group' },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             'label',
-                                            { 'for': 'message-text', className: 'col-form-label' },
+                                            { htmlFor: 'message-text', className: 'col-form-label' },
                                             'Message:'
                                         ),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', { className: 'form-control', id: 'inviteEmailMsg' })
@@ -56271,7 +56278,7 @@ var ErrorModal = function (_Component) {
 
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: 'modal', tabindex: '-1', role: 'dialog', id: 'errorModal' },
+                    { className: 'modal', tabIndex: '-1', role: 'dialog', id: 'errorModal' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
                         { className: 'modal-dialog', role: 'document' },
@@ -56306,7 +56313,7 @@ var ErrorModal = function (_Component) {
                                 { className: 'modal-footer' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'button',
-                                    { type: 'button', 'class': 'btn btn-secondary', 'data-dismiss': 'modal' },
+                                    { type: 'button', className: 'btn btn-secondary', 'data-dismiss': 'modal' },
                                     'Close'
                                 )
                             )

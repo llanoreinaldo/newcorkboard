@@ -14,12 +14,12 @@ export default class Section1 extends Component {
                             <div className="col-6-md col-12-xs">
                                 <input className="new-item form-control" placeholder="Your New Board Name" type="text" id="boardName" required="required"></input>
                             </div>
-                            <div class="col-4-md col-12-xs">
-                                <input class="new-item form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your Email" type="email"
+                            <div className="col-4-md col-12-xs">
+                                <input className="new-item form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your Email" type="email"
                                     id="ownerEmail" required="required"></input>
                             </div>
-                            <div class="col-4-md col-12-xs">
-                                <input value="Create new Board" type="submit" class="btn btn-primary" data-toggle="modal" id="createBoard"></input>
+                            <div className="col-4-md col-12-xs">
+                                <input value="Create New Board" type="submit" className="btn btn-primary" data-toggle="modal" id="createBoard"></input>
                             </div>
                         </div>
                     </div>
