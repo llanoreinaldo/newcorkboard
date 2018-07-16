@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use App\Board;
  
 class BoardsController extends Controller
@@ -21,8 +22,8 @@ class BoardsController extends Controller
     public function store(Request $request)
     {
         $board = Board::create($request->all());
-        return View::make("/");
-        // return response()->json($board, 201);
+        // return View::make("/");
+        return response()->json($board, 201);
     }
  
     public function update(Request $request, Board $board)

@@ -56514,7 +56514,7 @@ var Section1na = function (_Component) {
           { id: "app" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "form",
-            { id: "start-board" },
+            { action: "/api/boards", method: "POST", id: "start-board" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
               { className: "container" },
@@ -56529,7 +56529,8 @@ var Section1na = function (_Component) {
                     placeholder: "Your New Board Name",
                     type: "text",
                     id: "boardName",
-                    required: "required"
+                    required: "required",
+                    name: "name"
                   })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -56541,7 +56542,8 @@ var Section1na = function (_Component) {
                     placeholder: "Your Email",
                     type: "email",
                     id: "ownerEmail",
-                    required: "required"
+                    required: "required",
+                    name: "email"
                   })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

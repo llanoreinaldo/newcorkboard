@@ -9,7 +9,7 @@ export default class Section1na extends Component {
 
         {/* <!-- Create New Board Code --> */}
         <div id="app">
-          <form id="start-board">
+          <form action="/api/boards" method="POST" id="start-board">
             <div className="container">
               <div className="flex-row row justify-content-center">
                 <div className="col-6-md col-12-xs" style={{ marginRight: 10 }}>
@@ -19,6 +19,7 @@ export default class Section1na extends Component {
                     type="text"
                     id="boardName"
                     required="required"
+                    name="name"
                   />
                 </div>
                 <div className="col-4-md col-12-xs" style={{ marginRight: 10 }}>
@@ -29,6 +30,7 @@ export default class Section1na extends Component {
                     type="email"
                     id="ownerEmail"
                     required="required"
+                    name="email"
                   />
                 </div>
                 <div className="col-4-md col-12-xs">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use App\Tag;
  
 class TagsController extends Controller
@@ -21,7 +22,7 @@ class TagsController extends Controller
     public function store(Request $request)
     {
         $tag = Tag::create($request->all());
- 
+        // return Redirect::to('api/boards');
         return response()->json($tag, 201);
     }
  
