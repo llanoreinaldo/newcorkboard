@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "laravel-echo": "^1.4.0",
+        "react-router-dom": "^4.3.1",
         "yarn": "^1.7.0"
     }
 }
