@@ -7,7 +7,7 @@ export default class Section1a extends Component {
 
             <section className="section section-dark">
 
-                <h2>Create Your Board</h2>
+                <h2>Login or Register to Create or Access Your Board</h2>
 
                 {/* <!-- Create New Board Code --> */}
                 <div id="app">
