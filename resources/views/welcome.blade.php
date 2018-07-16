@@ -24,7 +24,7 @@
     @if (Route::has('login'))
     @auth
     <div id="pimg1"></div>
-    <div id="section1a"></div>
+    <div id="section1na"></div>
     <div id="pimg2"></div>
     <div id="section2"></div>
     <div id="pimg3"></div>
@@ -35,7 +35,7 @@
 
     @else
     <div id="pimg1"></div>
-    <div id="section1na"></div>
+    <div id="section1a"></div>
     <div id="pimg2"></div>
     <div id="section2"></div>
     <div id="pimg3"></div>

@@ -56657,12 +56657,12 @@ var Section1na = function (_Component) {
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'div',
                                     { className: 'col-6-md col-12-xs', style: { marginRight: 10 } },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'new-item form-control', placeholder: 'Your New Board Name', type: 'text', id: 'boardName', required: 'required' })
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button', { className: 'btn btn-primary btn-lg new-item form-control', placeholder: 'Your New Board Name', type: 'text', id: 'boardName', required: 'required' })
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'div',
                                     { className: 'col-4-md col-12-xs', style: { marginRight: 10 } },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'new-item form-control', pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$', placeholder: 'Your Email', type: 'email',
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button', { className: 'btn btn-primary btn-lg new-item form-control', pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$', placeholder: 'Your Email', type: 'email',
                                         id: 'ownerEmail', required: 'required' })
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
