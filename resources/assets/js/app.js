@@ -22,6 +22,28 @@ import Section3 from "./components/Section3";
 import InviteModal from "./components/InviteModal";
 import ErrorModal from "./components/ErrorModal";
 
+<<<<<<< HEAD
 require("./components/LoginModal");
 require("./components/RegisterModal");
 require("./components/Main");
+=======
+import Pimg1 from './components/Home/Pimg1';
+import Pimg2 from './components/Home/Pimg2';
+import Pimg3 from './components/Home/Pimg3';
+import Section1a from './components/Home/Section1a';
+import Section1na from './components/Home/Section1na';
+import Section2 from './components/Home/Section2';
+import Section3 from './components/Home/Section3';
+import InviteModal from './components/Home/InviteModal';
+import ErrorModal from './components/Auth/ErrorModal';
+import RegisterModal from './components/Auth/RegisterModal';
+
+import Filters from '.components/Board/Filters';
+import Navbar from '.components/Board/Navbar';
+import Cards from '.components/Board/Cards';
+import Announcements from '.components/Board/Announcements'
+
+
+require('./components/LoginModal')
+require('./components/RegisterModal')
+>>>>>>> master

@@ -1,5 +1,10 @@
+<<<<<<< HEAD:resources/assets/js/components/Section1a.js
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+=======
+import React, { Component } from '../../../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
+import ReactDOM from '../../../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react-dom';
+>>>>>>> master:resources/assets/js/components/Home/Section1a.js
 
 export default class Section1a extends Component {
   render() {
