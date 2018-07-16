@@ -24,10 +24,10 @@ import InviteModal from './components/Home/InviteModal';
 import ErrorModal from './components/Auth/ErrorModal';
 import RegisterModal from './components/Auth/RegisterModal';
 
-import Filters from '.components/Main/Filters';
-import Navbar from '.components/Main/Navbar';
-import Cards from '.components/Main/Cards';
-import Announcements from '.components/Main/Announcements'
+import Filters from '.components/Board/Filters';
+import Navbar from '.components/Board/Navbar';
+import Cards from '.components/Board/Cards';
+import Announcements from '.components/Board/Announcements'
 
 
 require('./components/LoginModal')
