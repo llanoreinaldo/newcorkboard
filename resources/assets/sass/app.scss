@@ -1,14 +1,27 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
 .navbar-laravel {
-  background-color: #fff;
+  background-color: #002245;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+#backtodash {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #002245;
+}
+
+#backtodash p {
+  color: #45A2D7;
+}
+
+#login a,
+#register a {
+  text-decoration: none;
+  color: white;
 }

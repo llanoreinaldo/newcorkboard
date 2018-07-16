@@ -10470,8 +10470,25 @@ a.text-dark:focus {
 }
 
 .navbar-laravel {
-  background-color: #fff;
+  background-color: #002245;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+#backtodash {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #002245;
+}
+
+#backtodash p {
+  color: #45A2D7;
+}
+
+#login a,
+#register a {
+  text-decoration: none;
+  color: white;
 }
 
