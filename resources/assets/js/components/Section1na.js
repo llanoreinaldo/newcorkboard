@@ -15,15 +15,15 @@ export default class Section1na extends Component {
                         <div className="container">
                             <div className="flex-row row justify-content-center">
                                 <div className="col-6-md col-12-xs" style={{ marginRight: 10 }}>
-                                    <button className="btn btn-primary btn-lg new-item form-control" placeholder="Your New Board Name" type="text" id="boardName" required="required"></button>
+                                    <input className="new-item form-control" placeholder="Your New Board Name" type="text" id="boardName" required="required"></input>
                                 </div>
                                 <div className="col-4-md col-12-xs" style={{ marginRight: 10 }}>
-                                    <button className="btn btn-primary btn-lg new-item form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your Email" type="email"
-                                        id="ownerEmail" required="required"></button>
+                                    <input className="new-item form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="Your Email" type="email"
+                                        id="ownerEmail" required="required"></input>
                                 </div>
                                 <div className="col-4-md col-12-xs">
                                 {/* Need to change href for proper route */}
-                                    <a href="{{ url('/home') }}"> <input value="Create New Board" type="submit" className="btn btn-primary" data-toggle="modal" id="createBoard"></input> </a>
+                                    <a href="{{ url('/home') }}"> <button value="Create New Board" type="submit" className="btn btn-primary" data-toggle="modal" id="createBoard">Create New Board</button></a>
                                 </div>
                             </div>
                         </div>
