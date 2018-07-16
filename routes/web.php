@@ -15,11 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/boards", function() {
-    $boards = DB::table('boards')->get();
-    return 'working';
-});
+
 
 Auth::routes();
-
+Route::get("/boards", function() {
+    $boards = DB::table('boards')->get();
+    return $boards;
+});
 Route::get('/home', 'HomeController@index')->name('home');

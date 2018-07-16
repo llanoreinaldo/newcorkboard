@@ -11,7 +11,7 @@ require("./bootstrap");
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+// import Main from "./components/Main";
 import Pimg1 from "./components/Pimg1";
 import Pimg2 from "./components/Pimg2";
 import Pimg3 from "./components/Pimg3";
@@ -24,3 +24,4 @@ import ErrorModal from "./components/ErrorModal";
 
 require("./components/LoginModal");
 require("./components/RegisterModal");
+require("./components/Main");

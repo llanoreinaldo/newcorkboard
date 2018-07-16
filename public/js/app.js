@@ -14154,7 +14154,7 @@ __webpack_require__(20);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+// import Main from "./components/Main";
 
 
 
@@ -14167,6 +14167,7 @@ __webpack_require__(20);
 
 __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/LoginModal\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/RegisterModal\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+__webpack_require__(44);
 
 /***/ }),
 /* 20 */
@@ -36399,7 +36400,88 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 44 */,
+/* 44 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+/* An example React component */
+
+var Main = function (_Component) {
+  _inherits(Main, _Component);
+
+  function Main() {
+    _classCallCheck(this, Main);
+
+    var _this = _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this));
+
+    _this.state = {
+      boards: []
+    };
+    return _this;
+  }
+
+  _createClass(Main, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get("api/boards").then(function (response) {
+        _this2.setState({
+          boards: response.data
+        });
+      }).catch(function (errors) {
+        console.log(errors);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        { className: "container" },
+        this.state.boards.map,
+        "(boards => ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "li",
+          null,
+          boards.body
+        ),
+        ")}"
+      );
+    }
+  }]);
+
+  return Main;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* The if statement is required so as to Render the component on pages that have a div with an ID of "root";  
+*/
+
+/* harmony default export */ __webpack_exports__["default"] = (Main);
+if (document.getElementById("main")) {
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Main, null), document.getElementById("main"));
+}
+
+/***/ }),
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -56408,78 +56490,111 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Section1na = function (_Component) {
-    _inherits(Section1na, _Component);
+  _inherits(Section1na, _Component);
 
-    function Section1na() {
-        _classCallCheck(this, Section1na);
+  function Section1na() {
+    _classCallCheck(this, Section1na);
 
-        return _possibleConstructorReturn(this, (Section1na.__proto__ || Object.getPrototypeOf(Section1na)).apply(this, arguments));
-    }
+    return _possibleConstructorReturn(this, (Section1na.__proto__ || Object.getPrototypeOf(Section1na)).apply(this, arguments));
+  }
 
-    _createClass(Section1na, [{
-        key: 'render',
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'section',
-                { className: 'section section-dark' },
+  _createClass(Section1na, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "section",
+        { className: "section section-dark" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "h2",
+          null,
+          "Create Your Board"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          { id: "app" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "form",
+            { id: "start-board" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "div",
+              { className: "container" },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "flex-row row justify-content-center" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h2',
-                    null,
-                    'Create Your Board'
+                  "div",
+                  { className: "col-6-md col-12-xs", style: { marginRight: 10 } },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                    className: "new-item form-control",
+                    placeholder: "Your New Board Name",
+                    type: "text",
+                    id: "boardName",
+                    required: "required"
+                  })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { id: 'app' },
+                  "div",
+                  { className: "col-4-md col-12-xs", style: { marginRight: 10 } },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                    className: "new-item form-control",
+                    pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$",
+                    placeholder: "Your Email",
+                    type: "email",
+                    id: "ownerEmail",
+                    required: "required"
+                  })
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "div",
+                  { className: "col-4-md col-12-xs" },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "a",
+                    { href: "{{ url('/home') }}" },
+                    " ",
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'form',
-                        { id: 'start-board' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'container' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'flex-row row justify-content-center' },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'div',
-                                    { className: 'col-6-md col-12-xs', style: { marginRight: 10 } },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'new-item form-control', placeholder: 'Your New Board Name', type: 'text', id: 'boardName', required: 'required' })
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'div',
-                                    { className: 'col-4-md col-12-xs', style: { marginRight: 10 } },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'new-item form-control', pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$', placeholder: 'Your Email', type: 'email',
-                                        id: 'ownerEmail', required: 'required' })
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'div',
-                                    { className: 'col-4-md col-12-xs' },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        'a',
-                                        { href: '{{ url(\'/home\') }}' },
-                                        ' ',
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                            'button',
-                                            { value: 'Create New Board', type: 'submit', className: 'btn btn-primary', 'data-toggle': 'modal', id: 'createBoard' },
-                                            'Create New Board'
-                                        )
-                                    )
-                                )
-                            )
-                        )
+                      "button",
+                      {
+                        value: "Create New Board",
+                        type: "submit",
+                        className: "btn btn-primary",
+                        "data-toggle": "modal",
+                        id: "createBoard"
+                      },
+                      "Create New Board"
                     )
+                  )
                 )
-            );
-        }
-    }]);
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "a",
+            { href: "/home" },
+            " ",
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "p",
+              {
+                value: "Back To Dashboard"
+                //   className="btn btn-primary"
+                , "data-toggle": "modal",
+                id: "backtodash"
+              },
+              "\u25C4Dashboard"
+            )
+          )
+        )
+      );
+    }
+  }]);
 
-    return Section1na;
+  return Section1na;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* unused harmony default export */ var _unused_webpack_default_export = (Section1na);
 
 
-if (document.getElementById('section1na')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Section1na, null), document.getElementById('section1na'));
+if (document.getElementById("section1na")) {
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Section1na, null), document.getElementById("section1na"));
 }
 
 /***/ })

@@ -1,22 +1,39 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
- 
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import axios from "axios";
+
 /* An example React component */
-class Main extends Component {
-    render() {
-        return (
-            <div>
-                <h3>All Products</h3>
-            </div>
-        );
-    }
+export default class Main extends Component {
+  constructor() {
+    super();
+    this.state = {
+      boards: []
+    };
+  }
+  componentWillMount() {
+    axios
+      .get("api/boards")
+      .then(response => {
+        this.setState({
+          boards: response.data
+        });
+      })
+      .catch(errors => {
+        console.log(errors);
+      });
+  }
+  render() {
+    return (
+      <div className="container">
+        {this.state.boards.map}(boards => <li>{boards.body}</li>)}
+      </div>
+    );
+  }
 }
- 
-export default Main;
- 
+
 /* The if statement is required so as to Render the component on pages that have a div with an ID of "root";  
 */
- 
-if (document.getElementById('root')) {
-    ReactDOM.render(<Main />, document.getElementById('root'));
+
+if (document.getElementById("main")) {
+  ReactDOM.render(<Main />, document.getElementById("main"));
 }

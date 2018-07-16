@@ -18,20 +18,22 @@
          <meta name="csrf-token" content="{{ csrf_token() }}">
 
     </head>
+    
 
     <body>
        
     @if (Route::has('login'))
     @auth
-    <div id="pimg1"></div>
+    <!-- <div id="main"></div> -->
+    <!-- <div id="pimg1"></div> -->
     <div id="section1na"></div>
     <div id="pimg2"></div>
-    <div id="section2"></div>
+    <!-- <div id="section2"></div>
     <div id="pimg3"></div>
     <div id="inviteModal"></div>
     <div id="errorModal"></div>
     <div id="section3"></div>
-    <div id="pimg1"></div>
+    <div id="pimg1"></div> -->
 
     @else
     <div id="pimg1"></div>

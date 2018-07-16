@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header"><h1>{{ Auth::user()->name }}'s Dashboard</h1>  </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,18 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <!-- You are logged in! -->
+                    <!-- <hr> -->
+                    <center>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a name="" id="" class="btn btn-primary" href="/" role="button"> New Board</a>
+                        </div>
+                        <div class="col-lg-6">
+                            <a name="" id="" class="btn btn-primary" href="/boards" role="button"> My Boards</a>
+                        </div>
+                    </div>
+                    <center>
                 </div>
             </div>
         </div>
