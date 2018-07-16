@@ -20,8 +20,11 @@
     </head>
 
     <body>
+       
+    @if (Route::has('login'))
+    @auth
     <div id="pimg1"></div>
-    <div id="section1"></div>
+    <div id="section1a"></div>
     <div id="pimg2"></div>
     <div id="section2"></div>
     <div id="pimg3"></div>
@@ -29,6 +32,20 @@
     <div id="errorModal"></div>
     <div id="section3"></div>
     <div id="pimg1"></div>
+
+    @else
+    <div id="pimg1"></div>
+    <div id="section1na"></div>
+    <div id="pimg2"></div>
+    <div id="section2"></div>
+    <div id="pimg3"></div>
+    <div id="inviteModal"></div>
+    <div id="errorModal"></div>
+    <div id="section3"></div>
+    <div id="pimg1"></div>
+    @endauth
+    
+    @endif
 
         <script src="{{mix('js/app.js')}}" ></script>
     </body>
