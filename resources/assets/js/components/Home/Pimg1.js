@@ -1,7 +1,7 @@
 import React, {
     Component
-} from 'react';
-import ReactDOM from 'react-dom';
+} from '../../../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
+import ReactDOM from '../../../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react-dom';
 
 export default class Pimg1 extends Component {
     render() {
