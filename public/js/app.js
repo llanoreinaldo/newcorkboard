@@ -56552,7 +56552,7 @@ var Section1a = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h2',
                     null,
-                    'Login or Register to Create or Access Your Board'
+                    'Login to Acess Your Boards. Register to Create a New Board.'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
