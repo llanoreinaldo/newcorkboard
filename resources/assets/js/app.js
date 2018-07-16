@@ -22,11 +22,6 @@ import Section3 from "./components/Section3";
 import InviteModal from "./components/InviteModal";
 import ErrorModal from "./components/ErrorModal";
 
-<<<<<<< HEAD
-require("./components/LoginModal");
-require("./components/RegisterModal");
-require("./components/Main");
-=======
 import Pimg1 from './components/Home/Pimg1';
 import Pimg2 from './components/Home/Pimg2';
 import Pimg3 from './components/Home/Pimg3';
@@ -46,4 +41,3 @@ import Announcements from '.components/Board/Announcements'
 
 require('./components/LoginModal')
 require('./components/RegisterModal')
->>>>>>> master
