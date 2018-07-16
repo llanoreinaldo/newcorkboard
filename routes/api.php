@@ -35,6 +35,7 @@ Route::get('boards/{board}', function ($boardId) {
  
 Route::post('boards', function(Request $request) {
     $resp = Board::create($request->all());
+    return Redirect::to('/boards');
 });
  
 Route::put('boards/{board}', function(Request $request, $linkId) {
