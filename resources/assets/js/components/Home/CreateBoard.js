@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-export default class Section1na extends Component {
+export default class CreateBoard extends Component {
   render() {
     return (
       <section className="section section-dark">
@@ -51,23 +51,12 @@ export default class Section1na extends Component {
               </div>
             </div>
           </form>
-          <a href="/home">
-            {" "}
-            <p
-              value="Back To Dashboard"
-              //   className="btn btn-primary"
-              data-toggle="modal"
-              id="backtodash"
-            >
-              ◄Dashboard
-            </p>
-          </a>
         </div>
       </section>
     );
   }
 }
 
-if (document.getElementById("section1na")) {
-  ReactDOM.render(<Section1na />, document.getElementById("section1na"));
+if (document.getElementById("createBoard")) {
+  ReactDOM.render(<CreateBoard />, document.getElementById("createBoard"));
 }

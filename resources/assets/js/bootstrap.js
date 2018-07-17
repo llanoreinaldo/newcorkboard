@@ -1,5 +1,5 @@
 
-window._ = require('../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/lodash');
+window._ = require('lodash');
 window.Popper = require('popper.js').default;
 
 /**
@@ -11,7 +11,7 @@ window.Popper = require('popper.js').default;
 try {
     window.$ = window.jQuery = require('jquery');
 
-    require('../../../../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/bootstrap');
+    require('bootstrap');
 } catch (e) {}
 
 /**
