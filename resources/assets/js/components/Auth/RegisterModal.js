@@ -1,5 +1,11 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 ReactModal.setAppElement('#register');
+
+export default class RegisterApp extends Component {
+  render() {
+    return (
 
 class RegisterApp extends React.Component {
   constructor () {
@@ -39,6 +45,11 @@ class RegisterApp extends React.Component {
   }
 }
 
+);
+}
+}
 const props = {};
 
-ReactDOM.render(<RegisterApp {...props} />, document.getElementById('register'))
+if (document.getElementById('#register')) {
+ReactDOM.render(<RegisterApp {...props} />, document.getElementById('#register'))
+}

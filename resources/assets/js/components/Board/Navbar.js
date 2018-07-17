@@ -53,14 +53,14 @@ export default class Navbar extends Component {
                                 <a className="dropdown-item">
                                     <ul>
 
-                                        <li style="list-style-type: none; margin-left: -35px; font-size: 20px;">
-                                            <button type="button" style="width:155px;color:white;" className="btn filterBtn">
+                                        <li style={{listStyleType: none, marginLeft: -35, fontSize: 20}}>
+                                            <button type="button" style={{width:155,color:white}} className="btn filterBtn">
                                                 <i className="fas fa-tags"></i>
                                                 Tags
                                 </button>
                                         </li>
-                                        <li style="list-style-type: none; padding-right: 30px; font-size: 20px;">
-                                            <button type="button" style="width:155px;" className="btn newLink2" data-toggle="modal" data-target="#postModal">
+                                        <li style={{listStyleType: none, paddingRight: 30, fontSize: 20}}>
+                                            <button type="button" style={{width:155}} className="btn newLink2" data-toggle="modal" data-target="#postModal">
                                                 <i className="fas fa-bookmark"></i>
                                                 Bookmarks
                                 </button>
@@ -76,20 +76,20 @@ export default class Navbar extends Component {
 
                     <ul>
                         <a id="close" href="#">
-                            <button type="button" style="width:155px;color:white;" className="btn filter">
+                            <button type="button" style={{width:155,color:white}} className="btn filter">
                                 <i className="fas fa-times"></i>
                             </button>
                         </a>
                         <a id="filter" href="#">
-                            <li style="list-style-type: none; padding-right: 30px; font-size: 20px;">
-                                <button type="button" style="width:155px;color:white;" className="btn filter">
+                            <li style={{listStyleType: none, paddingRight: 30, fontSize: 20}}>
+                                <button type="button" style={{width:155,color:white}} className="btn filter">
                                     <i className="fas fa-tags"></i>
                                     Tags
                     </button>
                             </li>
                         </a>
-                        <li id="bookmark" style="list-style-type: none; padding-right: 30px; font-size: 20px;">
-                            <button type="button" style="width:155px;" className="btn newLink" data-toggle="modal" data-target="#postModal">
+                        <li id="bookmark" style={{listStyleType: none, paddingRight: 30, fontSize: 20}}>
+                            <button type="button" style={{width:155}} className="btn newLink" data-toggle="modal" data-target="#postModal">
                                 <i className="fas fa-bookmark"></i>
                                 Add Bookmark
                 </button>

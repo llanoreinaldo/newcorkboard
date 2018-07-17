@@ -26,7 +26,7 @@ export default class BoardModals extends Component {
                     </div>
                 </div>
             </div>
-            
+
             // <!-- Modal for edit topic -->
             <div className="modal fade" id="editTopicModal" tabindex="-1" role="dialog" aria-labelledby="topicModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
@@ -48,9 +48,9 @@ export default class BoardModals extends Component {
                     </div>
                 </div>
             </div>
-            
+
             // <!--MODAL FOR EDIT CARD editModalLabel-->
-            
+
             <div className="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
@@ -77,14 +77,15 @@ export default class BoardModals extends Component {
                             <br></br>
                             <center className="editTags">
                                 <h4>Select Tags: </h4>
-                                <br><br>
-                                <div className="row filterButtons" style="padding-left: 20px">
-                                    {{#each board:tags}}
-                                    <li style="list-style-type: none; padding-right: 20px; font-size: 15px;">
+                                <br></br>
+                                <div className="row filterButtons" style={{ paddingLeft: 20 }}>
+                                    {/* {{#each board:tags}} Handlebars reference */}
+                                    <li style={{ listStyleType: none, paddingRight: 20, fontSize: 15 }}>
                                         <label>
-                                            <input value="{{id}}" type="checkbox" className="checkboxBtn">{{name}}</input></label>
+                                            <input value={{ id }} type="checkbox" className="checkboxBtn">{{ name }}</input>
+                                        </label>
                                     </li>
-                                    {{/each}}
+                                    {/* {{/each}} Handlebars reference*/}
                                 </div>
                             </center>
                         </div>
@@ -94,8 +95,8 @@ export default class BoardModals extends Component {
                     </div>
                 </div>
             </div>
-            
-            {/* <!-- Modal for new post --> */}
+
+            // {/* <!-- Modal for new post --> */}
             <div className="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
@@ -122,13 +123,13 @@ export default class BoardModals extends Component {
                             <center className="postTags">
                                 <h4>Select Tags: </h4>
                                 <br></br>
-                                <div className="row filterButtons" style="padding-left: 20px">
-                                    {{#each board.tags}}
-                                    <li style="list-style-type: none; padding-right: 20px; font-size: 15px;">
+                                <div className="row filterButtons" style={{ paddingLeft: 20 }}>
+                                    {/* {{#each board.tags}} */}
+                                    <li style={{ listStyleType: none, paddingRight: 20, fontSize: 15 }}>
                                         <label>
-                                            <input value="{{id}}" type="checkbox" className="checkboxBtn">{{name}}</label>
+                                            <input value="{{id}}" type="checkbox" className="checkboxBtn">{{ name }}</input></label>
                                     </li>
-                                    {{/each}}
+                                    {/* {{/each}} */}
                                 </div>
                             </center>
                         </div>
@@ -138,8 +139,8 @@ export default class BoardModals extends Component {
                     </div>
                 </div>
             </div>
-            
-            {/* <!-- Modal for new announcement --> */}
+
+            //{/* <!-- Modal for new announcement --> */}
             <div className="modal fade" id="announcementModal" tabindex="-1" role="dialog" aria-labelledby="announcementModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
@@ -166,9 +167,9 @@ export default class BoardModals extends Component {
             </div>
         
         );
-    }
-}
+    };
+};
 
 if (document.getElementById('boardModals')) {
-    ReactDOM.render(<BoardModals />, document.getElementById('boardModals'));
+    ReactDOM.render(<BoardModals />, document.getElementById('boardModals'))
 }

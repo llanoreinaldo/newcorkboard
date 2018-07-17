@@ -1214,14 +1214,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Home_Section3__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Home_InviteModal__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Home_ErrorModal__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Board_Filters__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Board_Navbar__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Board_Cards__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Board_Cards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_Board_Cards__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Announcements__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Announcements___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_Board_Announcements__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_BoardModals__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_BoardModals___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__components_Board_BoardModals__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Auth_RegisterModal__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Auth_LoginModal__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Board_Filters__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Navbar__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_Cards__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Board_Announcements__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Board_Announcements___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__components_Board_Announcements__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Board_BoardModals__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Board_BoardModals___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__components_Board_BoardModals__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -1246,8 +1247,8 @@ __webpack_require__(17);
 
 
 
-// import RegisterModal from './components/Auth/RegisterModal';
-// import LoginModal from './components/Auth/LoginModal'
+
+
 
 
 
@@ -35450,7 +35451,7 @@ var Filters = function (_Component) {
                                 { className: 'card-body row col-lg-12 col-md-12 col-sm-12 filterButtons' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'li',
-                                    { style: 'list-style-type: none; padding-right: 20px; font-size: 20px;' },
+                                    { style: { listStyleType: none, paddingRight: 20, fontSize: 20 } },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'label',
                                         null,
@@ -35626,20 +35627,20 @@ var Navbar = function (_Component) {
                                             null,
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 'li',
-                                                { style: 'list-style-type: none; margin-left: -35px; font-size: 20px;' },
+                                                { style: { listStyleType: none, marginLeft: -35, fontSize: 20 } },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     'button',
-                                                    { type: 'button', style: 'width:155px;color:white;', className: 'btn filterBtn' },
+                                                    { type: 'button', style: { width: 155, color: white }, className: 'btn filterBtn' },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-tags' }),
                                                     'Tags'
                                                 )
                                             ),
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                 'li',
-                                                { style: 'list-style-type: none; padding-right: 30px; font-size: 20px;' },
+                                                { style: { listStyleType: none, paddingRight: 30, fontSize: 20 } },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     'button',
-                                                    { type: 'button', style: 'width:155px;', className: 'btn newLink2', 'data-toggle': 'modal', 'data-target': '#postModal' },
+                                                    { type: 'button', style: { width: 155 }, className: 'btn newLink2', 'data-toggle': 'modal', 'data-target': '#postModal' },
                                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-bookmark' }),
                                                     'Bookmarks'
                                                 )
@@ -35657,7 +35658,7 @@ var Navbar = function (_Component) {
                                 { id: 'close', href: '#' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'button',
-                                    { type: 'button', style: 'width:155px;color:white;', className: 'btn filter' },
+                                    { type: 'button', style: { width: 155, color: white }, className: 'btn filter' },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-times' })
                                 )
                             ),
@@ -35666,10 +35667,10 @@ var Navbar = function (_Component) {
                                 { id: 'filter', href: '#' },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'li',
-                                    { style: 'list-style-type: none; padding-right: 30px; font-size: 20px;' },
+                                    { style: { listStyleType: none, paddingRight: 30, fontSize: 20 } },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         'button',
-                                        { type: 'button', style: 'width:155px;color:white;', className: 'btn filter' },
+                                        { type: 'button', style: { width: 155, color: white }, className: 'btn filter' },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-tags' }),
                                         'Tags'
                                     )
@@ -35677,10 +35678,10 @@ var Navbar = function (_Component) {
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'li',
-                                { id: 'bookmark', style: 'list-style-type: none; padding-right: 30px; font-size: 20px;' },
+                                { id: 'bookmark', style: { listStyleType: none, paddingRight: 30, fontSize: 20 } },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     'button',
-                                    { type: 'button', style: 'width:155px;', className: 'btn newLink', 'data-toggle': 'modal', 'data-target': '#postModal' },
+                                    { type: 'button', style: { width: 155 }, className: 'btn newLink', 'data-toggle': 'modal', 'data-target': '#postModal' },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fas fa-bookmark' }),
                                     'Add Bookmark'
                                 )
@@ -35728,21 +35729,172 @@ if (document.getElementById('navbar')) {
 
 /***/ }),
 /* 64 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/reina/OneDrive/Desktop/UCF Coding Bootcamp/Homework/Team Project 3/newcorkboard/resources/assets/js/components/Board/Cards.js: Unexpected character '#' (11:22)\n\n\u001b[0m \u001b[90m  9 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m \u001b[36mclass\u001b[39m\u001b[33m=\u001b[39m\u001b[32m\"main\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 10 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m \u001b[36mclass\u001b[39m\u001b[33m=\u001b[39m\u001b[32m\"cardWrapper col-lg-12 col-md-8\"\u001b[39m\u001b[33m>\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 | \u001b[39m                    {{\u001b[37m\u001b[41m\u001b[1m#\u001b[22m\u001b[49m\u001b[39m\u001b[36mif\u001b[39m board\u001b[33m:\u001b[39mlinks}}\n \u001b[90m    | \u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mul\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 13 | \u001b[39m                        {{\u001b[37m\u001b[41m\u001b[1m#\u001b[22m\u001b[49m\u001b[39meach board\u001b[33m:\u001b[39mlinks}}\n \u001b[90m 14 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m \u001b[36mclass\u001b[39m\u001b[33m=\u001b[39m\u001b[32m\"card\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n");
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var Cards = function (_Component) {
+    _inherits(Cards, _Component);
+
+    function Cards() {
+        _classCallCheck(this, Cards);
+
+        return _possibleConstructorReturn(this, (Cards.__proto__ || Object.getPrototypeOf(Cards)).apply(this, arguments));
+    }
+
+    _createClass(Cards, [{
+        key: 'render',
+        value: function render() {
+            return (
+
+                // <!--CARDS-->
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { 'class': 'main' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'cardWrapper col-lg-12 col-md-8' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'ul',
+                            null,
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'div',
+                                { 'class': 'card' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { 'class': 'card-body' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { 'class': 'row' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'h5',
+                                            { id: 'cardTitleLinkNum{{id}}', 'class': 'col-lg-8 col-md-8 col-sm-8 title' },
+                                            { title: title }
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { 'class': 'col-lg-8', id: 'url' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'a',
+                                                { href: '{{url}}', target: '_blank', id: 'cardUrlLinkNum{{id}}' },
+                                                { url: url }
+                                            )
+                                        )
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { 'class': 'row' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { 'class': 'col-lg-8 col-md-6 col-sm-6' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'p',
+                                                { 'class': 'card-text cardDescription', id: 'cardDescLinkNum{{id}}' },
+                                                { description: description }
+                                            )
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { 'class': 'col-lg-4 col-md-4 col-sm-4' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'p',
+                                                null,
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'img',
+                                                    { id: 'cardImgLinkNum{{id}}', 'class': 'card-img-top cardImg', src: '{{image_url}}' },
+                                                    ' '
+                                                )
+                                            )
+                                        )
+                                    )
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { 'class': 'row bottomsec' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { 'class': 'col-lg-12 col-sm-12' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'div',
+                                            { 'class': 'card-header' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'small',
+                                                { 'class': 'text-muted' },
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { 'class': 'cardIcons' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'button',
+                                                        null,
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fas fa-pencil-alt cardEdit', 'data-toggle': 'modal', 'data-target': '#editModal', 'data-linkId': '{{id}}' }),
+                                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fas fa-trash-alt cardDelete', 'data-toggle': 'modal', 'data-target': '#deleteModal', 'data-linkId': '{{id}}' })
+                                                    )
+                                                ),
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'div',
+                                                    { 'class': 'tagsId tags{{id}}' },
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'h4',
+                                                        { style: { float: left } },
+                                                        'Tags:'
+                                                    ),
+                                                    ' ',
+                                                    ' |',
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'a',
+                                                        { href: '/boards/{{../../board.id}}/tags/{{id}}', 'data-tagId': { id: id } },
+                                                        { name: name }
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Cards;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (Cards);
+
+
+if (document.getElementById('cards')) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Cards, null), document.getElementById('cards'));
+}
 
 /***/ }),
 /* 65 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/reina/OneDrive/Desktop/UCF Coding Bootcamp/Homework/Team Project 3/newcorkboard/resources/assets/js/components/Board/Announcements.js: Unexpected token, expected , (10:21)\n\n\u001b[0m \u001b[90m  8 | \u001b[39m        {\u001b[90m/*<!--ANNOUNCEMENTS-->*/\u001b[39m}\n \u001b[90m  9 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"main\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"card sidebar\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 12 | \u001b[39m                       \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"card-header\"\u001b[39m style\u001b[33m=\u001b[39m{{background\u001b[33m:\u001b[39m\u001b[32m\"#001945\"\u001b[39m}} style\u001b[33m=\u001b[39m{{color\u001b[33m:\u001b[39mwhite}}\u001b[33m>\u001b[39m\n \u001b[90m 13 | \u001b[39m            \u001b[33mAnnouncements\u001b[39m\u001b[0m\n");
+throw new Error("Module build failed: SyntaxError: C:/Users/reina/OneDrive/Desktop/UCF Coding Bootcamp/Homework/Team Project 3/newcorkboard/resources/assets/js/components/Board/Announcements.js: Adjacent JSX elements must be wrapped in an enclosing tag (30:12)\n\n\u001b[0m \u001b[90m 28 | \u001b[39m            \u001b[90m//{/* <!--dropdown announcement--> */ }\u001b[39m\n \u001b[90m 29 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"card col-lg-12 col-md-4\"\u001b[39m id\u001b[33m=\u001b[39m\u001b[32m\"dropAnnounce\"\u001b[39m style\u001b[33m=\u001b[39m{{ background\u001b[33m:\u001b[39m \u001b[32m\"#100F4E\"\u001b[39m\u001b[33m,\u001b[39m color\u001b[33m:\u001b[39m white }}\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 | \u001b[39m\n \u001b[90m 32 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"card-header\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 33 | \u001b[39m                    \u001b[33mAnnouncements\u001b[39m\u001b[0m\n");
 
 /***/ }),
 /* 66 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/reina/OneDrive/Desktop/UCF Coding Bootcamp/Homework/Team Project 3/newcorkboard/resources/assets/js/components/Board/BoardModals.js: Adjacent JSX elements must be wrapped in an enclosing tag (31:12)\n\n\u001b[0m \u001b[90m 29 | \u001b[39m            \n \u001b[90m 30 | \u001b[39m            \u001b[90m// <!-- Modal for edit topic -->\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"modal fade\"\u001b[39m id\u001b[33m=\u001b[39m\u001b[32m\"editTopicModal\"\u001b[39m tabindex\u001b[33m=\u001b[39m\u001b[32m\"-1\"\u001b[39m role\u001b[33m=\u001b[39m\u001b[32m\"dialog\"\u001b[39m aria\u001b[33m-\u001b[39mlabelledby\u001b[33m=\u001b[39m\u001b[32m\"topicModalLabel\"\u001b[39m aria\u001b[33m-\u001b[39mhidden\u001b[33m=\u001b[39m\u001b[32m\"true\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"modal-dialog\"\u001b[39m role\u001b[33m=\u001b[39m\u001b[32m\"document\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 33 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"modal-content\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 34 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"modal-header\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n");
+throw new Error("Module build failed: SyntaxError: C:/Users/reina/OneDrive/Desktop/UCF Coding Bootcamp/Homework/Team Project 3/newcorkboard/resources/assets/js/components/Board/BoardModals.js: Adjacent JSX elements must be wrapped in an enclosing tag (31:12)\n\n\u001b[0m \u001b[90m 29 | \u001b[39m\n \u001b[90m 30 | \u001b[39m            \u001b[90m// <!-- Modal for edit topic -->\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 31 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"modal fade\"\u001b[39m id\u001b[33m=\u001b[39m\u001b[32m\"editTopicModal\"\u001b[39m tabindex\u001b[33m=\u001b[39m\u001b[32m\"-1\"\u001b[39m role\u001b[33m=\u001b[39m\u001b[32m\"dialog\"\u001b[39m aria\u001b[33m-\u001b[39mlabelledby\u001b[33m=\u001b[39m\u001b[32m\"topicModalLabel\"\u001b[39m aria\u001b[33m-\u001b[39mhidden\u001b[33m=\u001b[39m\u001b[32m\"true\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 32 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"modal-dialog\"\u001b[39m role\u001b[33m=\u001b[39m\u001b[32m\"document\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 33 | \u001b[39m                    \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"modal-content\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 34 | \u001b[39m                        \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"modal-header\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n");
 
 /***/ }),
 /* 67 */
@@ -56937,6 +57089,226 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 76 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+ReactModal.setAppElement('#register');
+
+var RegisterApp = function (_Component) {
+  _inherits(RegisterApp, _Component);
+
+  function RegisterApp() {
+    _classCallCheck(this, RegisterApp);
+
+    return _possibleConstructorReturn(this, (RegisterApp.__proto__ || Object.getPrototypeOf(RegisterApp)).apply(this, arguments));
+  }
+
+  _createClass(RegisterApp, [{
+    key: 'render',
+    value: function render() {
+      return function (_React$Component) {
+        _inherits(RegisterApp, _React$Component);
+
+        function RegisterApp() {
+          _classCallCheck(this, RegisterApp);
+
+          var _this2 = _possibleConstructorReturn(this, (RegisterApp.__proto__ || Object.getPrototypeOf(RegisterApp)).call(this));
+
+          _this2.state = {
+            showModal: false
+          };
+
+          _this2.handleOpenModal = _this2.handleOpenModal.bind(_this2);
+          _this2.handleCloseModal = _this2.handleCloseModal.bind(_this2);
+          return _this2;
+        }
+
+        _createClass(RegisterApp, [{
+          key: 'handleOpenModal',
+          value: function handleOpenModal() {
+            this.setState({ showModal: true });
+          }
+        }, {
+          key: 'handleCloseModal',
+          value: function handleCloseModal() {
+            this.setState({ showModal: false });
+          }
+        }, {
+          key: 'render',
+          value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'button',
+                { onClick: this.handleOpenModal },
+                'Register'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                ReactModal,
+                {
+                  isOpen: this.state.showModal,
+                  contentLabel: 'onRequestClose',
+                  onRequestClose: this.handleCloseModal
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'p',
+                  null,
+                  'Modal text!'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'button',
+                  { onClick: this.handleCloseModal },
+                  'Submit'
+                )
+              )
+            );
+          }
+        }]);
+
+        return RegisterApp;
+      }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+    }
+  }]);
+
+  return RegisterApp;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (RegisterApp);
+
+var props = {};
+
+if (document.getElementById('#register')) {
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(RegisterApp, props), document.getElementById('#register'));
+}
+
+/***/ }),
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var LoginApp = function (_Component) {
+  _inherits(LoginApp, _Component);
+
+  function LoginApp() {
+    _classCallCheck(this, LoginApp);
+
+    return _possibleConstructorReturn(this, (LoginApp.__proto__ || Object.getPrototypeOf(LoginApp)).apply(this, arguments));
+  }
+
+  _createClass(LoginApp, [{
+    key: 'render',
+    value: function render() {
+      return function (_React$Component) {
+        _inherits(LoginApp, _React$Component);
+
+        function LoginApp() {
+          _classCallCheck(this, LoginApp);
+
+          var _this2 = _possibleConstructorReturn(this, (LoginApp.__proto__ || Object.getPrototypeOf(LoginApp)).call(this));
+
+          _this2.state = {
+            showModal: false
+          };
+
+          _this2.handleOpenModal = _this2.handleOpenModal.bind(_this2);
+          _this2.handleCloseModal = _this2.handleCloseModal.bind(_this2);
+          return _this2;
+        }
+
+        _createClass(LoginApp, [{
+          key: 'handleOpenModal',
+          value: function handleOpenModal() {
+            this.setState({ showModal: true });
+          }
+        }, {
+          key: 'handleCloseModal',
+          value: function handleCloseModal() {
+            this.setState({ showModal: false });
+          }
+        }, {
+          key: 'render',
+          value: function render() {
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'button',
+                { onClick: this.handleOpenModal },
+                'Login'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                ReactModal,
+                {
+                  isOpen: this.state.showModal,
+                  contentLabel: 'onRequestClose Example',
+                  onRequestClose: this.handleCloseModal
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'p',
+                  null,
+                  'Modal text!'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'button',
+                  { onClick: this.handleCloseModal },
+                  'Submit'
+                )
+              )
+            );
+          }
+        }]);
+
+        return LoginApp;
+      }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+    }
+  }]);
+
+  return LoginApp;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* unused harmony default export */ var _unused_webpack_default_export = (LoginApp);
+
+
+ReactModal.setAppElement('#login');
+var props = {};
+
+if (document.getElementById('#login')) {
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(LoginApp, props), document.getElementById('#login'));
+}
 
 /***/ })
 /******/ ]);

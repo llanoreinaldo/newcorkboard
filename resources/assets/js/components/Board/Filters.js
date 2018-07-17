@@ -19,7 +19,7 @@ export default class Filters extends Component {
                         </center>
                         <div className="card-body row col-lg-12 col-md-12 col-sm-12 filterButtons">
                             {/* {{#each board.tags}} */}
-                            <li style="list-style-type: none; padding-right: 20px; font-size: 20px;">
+                            <li style={{listStyleType: none, paddingRight: 20, fontSize: 20}}>
                                 <label>
                                     <input value="{{id}}" type="checkbox" className="checkboxBtn">{{ name }}</input></label>
                             </li>

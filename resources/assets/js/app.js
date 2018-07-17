@@ -22,8 +22,8 @@ import Section2 from './components/Home/Section2';
 import Section3 from './components/Home/Section3';
 import InviteModal from './components/Home/InviteModal';
 import ErrorModal from './components/Home/ErrorModal';
-// import RegisterModal from './components/Auth/RegisterModal';
-// import LoginModal from './components/Auth/LoginModal'
+import RegisterApp from './components/Auth/RegisterModal';
+import LoginApp from './components/Auth/LoginModal'
 
 import Filters from './components/Board/Filters';
 import Navbar from './components/Board/Navbar';
