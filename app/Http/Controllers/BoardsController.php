@@ -11,12 +11,14 @@ class BoardsController extends Controller
  
     public function index()
     {
-        return Board::all();
+        $boards = Board::all();
+
+        return view('home')->with(['boards' => $boards]);
     }
  
     public function show(Board $board)
     {
-        return $board;
+        return view('board_show')->with(['board' => $board]);
     }
  
     public function store(Request $request)
