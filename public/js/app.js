@@ -56004,7 +56004,7 @@ var LoginRegister = function (_Component) {
                       id: "login" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       "a",
-                      { href: "/home" },
+                      { href: "/lognin" },
                       "Login"
                     )
                   )

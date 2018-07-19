@@ -15,7 +15,7 @@ export default class LoginRegister extends Component {
                   <button
                     className="btn btn-primary btn-lg new-item form-control"
                     id="login">
-                    <a href="/home">Login</a>
+                    <a href="/lognin">Login</a>
                   </button>
                 </div>
                 <div className="col-6-md col-12-xs">
