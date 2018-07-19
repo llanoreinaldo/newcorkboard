@@ -24,8 +24,8 @@ class BoardsController extends Controller
     public function store(Request $request)
     {
         $board = Board::create($request->all());
-        // return View::make("/");
-        return response()->json($board, 201);
+        return redirect('home');
+        // return response()->json($board, 201);
     }
  
     public function update(Request $request, Board $board)

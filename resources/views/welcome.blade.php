@@ -32,11 +32,11 @@
     
     @endauth
     
-    <div id="getOrganizedImg" />
-    <div id="ourPurpose" />
-    <div id="collaborateImg" />
-    <div id="contactUs" />
-    <div id="homeLogoImg" />
+    <div id="getOrganizedImg"></div>
+    <div id="ourPurpose"></div>
+    <div id="collaborateImg"></div>
+    <div id="contactUs"></div>
+    <div id="homeLogoImg"></div>
 
         <script src="{{mix('js/app.js')}}" ></script>
     </body>
