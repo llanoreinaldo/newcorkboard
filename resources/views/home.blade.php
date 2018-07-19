@@ -12,11 +12,11 @@
                 <div class="card-body">
 
                 <ul>
-                    foreach($boards as &$board)
+                    @foreach($boards as $board)
                     <li>
                         <a href="/boards/{{ $board->id }}">{{ $board->name }}</a>
                     </li>
-                    endforeach
+                    @endforeach
                 </ul>
 
 
