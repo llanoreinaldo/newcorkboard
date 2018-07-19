@@ -8,7 +8,7 @@ export default class CreateBoard extends Component {
         <h2>Create Your Board</h2>
 
         {/* <!-- Create New Board Code --> */}
-        <div id="app">
+       
           <form action="/api/boards" method="POST" id="start-board">
             <div className="container">
               <div className="flex-row row justify-content-center">
@@ -51,7 +51,7 @@ export default class CreateBoard extends Component {
               </div>
             </div>
           </form>
-        </div>
+        
       </section>
     );
   }

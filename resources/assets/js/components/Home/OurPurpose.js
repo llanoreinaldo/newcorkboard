@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Section2 extends Component {
+export default class OurPurpose extends Component {
     render() {
         return (
             <section className="section section-dark">
@@ -17,6 +17,6 @@ export default class Section2 extends Component {
     }
 }
 
-if (document.getElementById('section2')) {
-    ReactDOM.render(<Section2 />, document.getElementById('section2'));
+if (document.getElementById('ourPurpose')) {
+    ReactDOM.render(<OurPurpose />, document.getElementById('ourPurpose'));
 }

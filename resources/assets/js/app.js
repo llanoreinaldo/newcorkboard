@@ -13,13 +13,13 @@ require("./bootstrap");
  */
 // import Main from "./components/Main";
 
-import Pimg1 from './components/Home/Pimg1';
-import Pimg2 from './components/Home/Pimg2';
-import Pimg3 from './components/Home/Pimg3';
+import HomeLogo from './components/Home/HomeLogo';
+import GetOrganizedImg from './components/Home/GetOrganizedImg';
+import CollaborateImg from './components/Home/CollaborateImg';
 import LoginRegister from './components/Home/LoginRegister';
 import CreateBoard from './components/Home/CreateBoard';
-import Section2 from './components/Home/Section2';
-import Section3 from './components/Home/Section3';
+import OurPurpose from './components/Home/OurPurpose';
+import ContactUs from './components/Home/ContactUs';
 import InviteModal from './components/Home/InviteModal';
 import ErrorModal from './components/Home/ErrorModal';
 import RegisterApp from './components/Auth/RegisterModal';
@@ -30,7 +30,3 @@ import Navbar from './components/Board/Navbar';
 import Cards from './components/Board/Cards';
 import Announcements from './components/Board/Announcements'
 import BoardModals from './components/Board/BoardModals'
-
-
-require('./components/LoginModal')
-require('./components/RegisterModal')

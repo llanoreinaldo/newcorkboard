@@ -21,7 +21,7 @@
     
 
     <body>
-    <div id="pimg1"></div>   
+    <div id="homeLogoImg"></div>   
    
     @auth
     <div id="createBoard"></div>
@@ -32,13 +32,11 @@
     
     @endauth
     
-    <div id="pimg2"></div>
-    <div id="section2"></div>
-    <div id="pimg3"></div>
-    <div id="inviteModal"></div>
-    <div id="errorModal"></div>
-    <div id="section3"></div>
-    <div id="pimg1"></div>
+    <div id="getOrganizedImg" />
+    <div id="ourPurpose" />
+    <div id="collaborateImg" />
+    <div id="contactUs" />
+    <div id="homeLogoImg" />
 
         <script src="{{mix('js/app.js')}}" ></script>
     </body>

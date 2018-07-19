@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Pimg3 extends Component {
+export default class CollaborateImg extends Component {
     render() {
         return (
-            <div className="pimg3" >
+            <div className="collaborate-img" >
                 <div className="ptext">
                     <span className="border trans">
                         Collaborate
@@ -15,6 +15,6 @@ export default class Pimg3 extends Component {
     }
 }
 
-if (document.getElementById('pimg3')) {
-    ReactDOM.render(<Pimg3 />, document.getElementById('pimg3'));
+if (document.getElementById('collaborateImg')) {
+    ReactDOM.render(<CollaborateImg />, document.getElementById('collaborateImg'));
 }

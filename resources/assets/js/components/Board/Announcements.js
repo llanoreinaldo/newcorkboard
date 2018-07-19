@@ -6,7 +6,7 @@ export default class Announcements extends Component {
         return (
 
             //{/*<!--ANNOUNCEMENTS-->*/ }
-
+            <div>
             <div className="main">
                 <div className="card sidebar">
                     <div className="card-header" style={{ background: "#001945", color: white }}>
@@ -44,7 +44,7 @@ export default class Announcements extends Component {
                     {/* {{!--<a href="#" className="btn btn-primary">Go somewhere</a> --}} */}
                 </div>
             </div >
-
+        </div>
        );
     }
 }

@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 export default class BoardModals extends Component {
     render() {
         return (
-
-            // <!-- Modal for new topic -->
+<div>
+            {/* // <!-- Modal for new topic --> */}
             <div className="modal fade" id="topicModal" tabindex="-1" role="dialog" aria-labelledby="topicModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
@@ -27,7 +27,7 @@ export default class BoardModals extends Component {
                 </div>
             </div>
 
-            // <!-- Modal for edit topic -->
+            {/* // <!-- Modal for edit topic --> */}
             <div className="modal fade" id="editTopicModal" tabindex="-1" role="dialog" aria-labelledby="topicModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
@@ -49,7 +49,7 @@ export default class BoardModals extends Component {
                 </div>
             </div>
 
-            // <!--MODAL FOR EDIT CARD editModalLabel-->
+            {/* // <!--MODAL FOR EDIT CARD editModalLabel--> */}
 
             <div className="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
@@ -165,10 +165,10 @@ export default class BoardModals extends Component {
                     </div>
                 </div>
             </div>
-        
+        </div>
         );
-    };
-};
+    }
+}
 
 if (document.getElementById('boardModals')) {
     ReactDOM.render(<BoardModals />, document.getElementById('boardModals'))

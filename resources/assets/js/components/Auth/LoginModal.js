@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+// ReactModal.setAppElement('#login')
 
 export default class LoginApp extends Component {
-  render() {
-    return (
-  
-    class LoginApp extends React.Component {
       constructor() {
         super();
         this.state = {
@@ -44,11 +41,7 @@ export default class LoginApp extends Component {
       }
     }
 
-        );
-  }
-}
 
-ReactModal.setAppElement('#login')
 const props = {};
 
 

@@ -21,8 +21,8 @@
 
     <body>
     <div id="Main"></div>
-    <div id="section3"></div>
-    <div id="pimg1"></div>
+    <div id="contact-us"></div>
+    <div id="home-logo-img"></div>
 
         <script src="{{mix('js/app.js')}}" ></script>
     </body>

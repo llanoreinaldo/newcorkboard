@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Pimg2 extends Component {
+export default class GetOrganizedImg extends Component {
     render() {
         return (
-            <div className="pimg2">
+            <div className="get-organized-img">
                 <div className="ptext">
                     <span className="border trans">
                         Get Organized
@@ -15,6 +15,6 @@ export default class Pimg2 extends Component {
     }
 }
 
-if (document.getElementById('pimg2')) {
-    ReactDOM.render(<Pimg2 />, document.getElementById('pimg2'));
+if (document.getElementById('getOrganizedImg')) {
+    ReactDOM.render(<GetOrganizedImg />, document.getElementById('getOrganizedImg'));
 }

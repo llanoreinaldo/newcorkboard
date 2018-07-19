@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-ReactModal.setAppElement('#register');
+// ReactModal.setAppElement('#register');
 
 export default class RegisterApp extends Component {
   render() {
