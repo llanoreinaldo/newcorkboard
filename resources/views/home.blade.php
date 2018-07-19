@@ -43,7 +43,7 @@
                               
                               <input type="email" class="form-control" name="email" id="" aria-describedby="emailHelpId" placeholder="Your Email" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Go</button>
+                            <button type="submit" class="btn btn-primary" id="gobtn">Go</button>
                         </div>
                         </form>
                         <!-- <div class="col-lg-6">
@@ -56,6 +56,10 @@
     </div>
 </div>
 <script type="text/javascript">
+// $('#newboardBtn').click(function(){
+//     $('#boardform').toggle();
+// });
+
 $('#newboardBtn').click(function(){
     $('#boardform').toggle();
 });

@@ -24,5 +24,5 @@ Route::get("/boards", function() {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/boards', 'BoardsController@index')->name('boards');
-Route::get('/boards/{board}', 'BoardsController@show');
+Route::get('/home', 'BoardsController@index')->name('boards');
+Route::get('/home/{board}', 'BoardsController@show');
