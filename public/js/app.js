@@ -55981,7 +55981,7 @@ var LoginRegister = function (_Component) {
           'div',
           { id: 'app' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'form',
+            'div',
             { id: 'start-board' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
@@ -55993,13 +55993,13 @@ var LoginRegister = function (_Component) {
                   'div',
                   { className: 'col-6-md col-12-xs', style: { marginRight: 10 } },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'button',
-                    {
-                      className: 'btn btn-primary btn-lg new-item form-control',
-                      id: 'login' },
+                    'a',
+                    { href: '/login' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'a',
-                      { href: '/home' },
+                      'button',
+                      {
+                        className: 'btn btn-primary btn-lg ',
+                        id: 'login' },
                       'Login'
                     )
                   )
@@ -56008,14 +56008,14 @@ var LoginRegister = function (_Component) {
                   'div',
                   { className: 'col-6-md col-12-xs' },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'button',
-                    {
-                      className: 'btn btn-primary btn-lg new-item form-control',
-                      id: 'register'
-                    },
+                    'a',
+                    { href: '/register' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'a',
-                      { href: '/register' },
+                      'button',
+                      {
+                        className: 'btn btn-primary btn-lg new-item form-control',
+                        id: 'register'
+                      },
                       'Register'
                     )
                   )
