@@ -49,19 +49,14 @@
                     <!-- <hr> -->
                 
                 </div>
-            </div>
-                                <br>
-                <br>
-            <div class='card'>
-                <div class=card-body>
-                <div id="createBoard"></div>
-                <div id="modalInvite"></div>
-                </div>
-            </div>
+            </div>    
+            <br>
+            <br>
         </div>
     </div>
 </div>
-
+        <div id="createBoard"></div>
+        <div id="modalInvite"></div>
 
 
 <script type="text/javascript">
