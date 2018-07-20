@@ -3,11 +3,12 @@
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h1>'s Dashboard</h1>  </div>
+                <div class="card-header"><h1>{{ Auth::user()->name }}'s Dashboard</h1>  </div>
 
                 <div class="card-body">
                 <table style="width:100%">
