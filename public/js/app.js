@@ -14123,7 +14123,7 @@ module.exports = checkPropTypes;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(19);
-module.exports = __webpack_require__(73);
+module.exports = __webpack_require__(71);
 
 
 /***/ }),
@@ -14139,15 +14139,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Home_CreateBoard__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Home_OurPurpose__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Home_ContactUs__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Home_InviteModal__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Home_ErrorModal__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Auth_RegisterModal__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Auth_LoginModal__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Board_Filters__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Navbar__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_Cards__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Board_Announcements__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Board_BoardModals__ = __webpack_require__(72);
+throw new Error("Cannot find module \"./components/Home/InviteModal\"");
+throw new Error("Cannot find module \"./components/Home/ErrorModal\"");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Auth_RegisterModal__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Auth_LoginModal__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Board_Filters__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Navbar__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_Cards__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Board_Announcements__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Board_BoardModals__ = __webpack_require__(70);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -56295,20 +56295,6 @@ if (document.getElementById('contactUs')) {
 
 /***/ }),
 /* 64 */
-/***/ (function(module, __webpack_exports__) {
-
-"use strict";
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\reina\\OneDrive\\Desktop\\UCF Coding Bootcamp\\Homework\\Team Project 3\\newcorkboard\\resources\\assets\\js\\components\\Home\\InviteModal.js'");
-
-/***/ }),
-/* 65 */
-/***/ (function(module, __webpack_exports__) {
-
-"use strict";
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\reina\\OneDrive\\Desktop\\UCF Coding Bootcamp\\Homework\\Team Project 3\\newcorkboard\\resources\\assets\\js\\components\\Home\\ErrorModal.js'");
-
-/***/ }),
-/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56418,7 +56404,7 @@ if (document.getElementById('#register')) {
 }
 
 /***/ }),
-/* 67 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56512,7 +56498,7 @@ if (document.getElementById('#login')) {
 }
 
 /***/ }),
-/* 68 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56649,7 +56635,7 @@ if (document.getElementById('filters')) {
 }
 
 /***/ }),
-/* 69 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56849,7 +56835,7 @@ if (document.getElementById('navbar')) {
 }
 
 /***/ }),
-/* 70 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57006,7 +56992,7 @@ if (document.getElementById('cards')) {
 }
 
 /***/ }),
-/* 71 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57116,7 +57102,7 @@ if (document.getElementById('announcements')) {
 }
 
 /***/ }),
-/* 72 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57480,7 +57466,7 @@ if (document.getElementById('boardModals')) {
 }
 
 /***/ }),
-/* 73 */
+/* 71 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

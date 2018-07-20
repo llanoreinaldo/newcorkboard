@@ -18,6 +18,13 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+
+            $table->foreign('board_id')->unsigned();
+            $table->foreign('board_id')->references('id')->on('boards');
+            
+            $table->foreign('message_id')->references('id')->on('messages');
+            $table->foreign('message_id')->unsigned();
+
             $table->rememberToken();
             $table->timestamps();
         });
