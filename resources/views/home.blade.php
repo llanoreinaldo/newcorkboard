@@ -14,11 +14,12 @@
                 <tr>
                     <th>Board ID</th>
                     <th>Board Name</th>
+                    <th>Created by</th>
                     <th>Last Updated</th>
                 </tr>
                
-                    @foreach($boards as $board)
-                 <tr> 
+                @foreach($boards as $board)
+                <tr> 
                     <td>
                         <a href="/boards/{{ $board->id }}">{{ $board->id }}</a>
                     </td>
@@ -27,10 +28,14 @@
                     </td>
                    
                     <td>
+                        <!-- <a>$users</a> -->
+                    </td>
+                    
+                    <td>
                         <a>{{ $board->updated_at }}</a>
                     </td>
                 </tr> 
-                    @endforeach
+                @endforeach
                 
                 </table>
 
