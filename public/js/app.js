@@ -59491,54 +59491,54 @@ var CreateBoard = function (_Component) {
   }
 
   _createClass(CreateBoard, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'section',
-        { className: 'section section-dark' },
+        "section",
+        { className: "section section-dark" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'h2',
+          "h2",
           null,
-          'Create Your Board'
+          "Create Your Board"
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'form',
-          { action: '/api/boards', method: 'POST', id: 'start-board' },
+          "form",
+          { action: "/api/boards", method: "POST", id: "start-board" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'container' },
+            "div",
+            { className: "container" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              { className: 'flex-row row justify-content-center' },
+              "div",
+              { className: "flex-row row justify-content-center" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'col-6-md col-12-xs', style: { marginRight: 10 } },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
-                  className: 'new-item form-control',
-                  placeholder: 'Your New Board Name',
-                  type: 'text',
-                  id: 'boardName',
-                  required: 'required',
-                  name: 'name'
+                "div",
+                { className: "col-6-md col-12-xs", style: { marginRight: 10 } },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                  className: "new-item form-control",
+                  placeholder: "Your New Board Name",
+                  type: "text",
+                  id: "boardName",
+                  required: "required",
+                  name: "name"
                 })
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { className: 'col-4-md col-12-xs' },
+                "div",
+                { className: "col-4-md col-12-xs" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'a',
-                  { href: '{{ url(\'/home\') }}' },
+                  "a",
+                  { href: "{{ url('/home') }}" },
                   " ",
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'button',
+                    "button",
                     {
-                      value: 'Create New Board',
-                      type: 'submit',
-                      className: 'btn btn-primary',
-                      'data-toggle': 'modal',
-                      id: 'createBoard'
+                      value: "Create New Board",
+                      type: "submit",
+                      className: "btn btn-primary",
+                      "data-toggle": "modal",
+                      id: "createBoard"
                     },
-                    'Create New Board'
+                    "Create New Board"
                   )
                 )
               )

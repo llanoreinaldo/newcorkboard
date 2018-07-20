@@ -11,18 +11,20 @@
 |
 */
 
+//THIS IS THE INDEX PAGE OF THE SITE
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get("/boards", function() {
-    $boards = DB::table('boards')->get();
-    return $boards;
-});
+// Route::get("/boards", function() {
+//     $boards = DB::table('boards')->get();
+//     return $boards;
+// });
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'BoardsController@index')->name('boards');
-Route::get('/home/{board}', 'BoardsController@show');
+// Route::get('/home', 'BoardsController@index')->name('boards');
+// Route::get('/home/{board}', 'BoardsController@show');
+Route::resource('home', 'BoardsController');

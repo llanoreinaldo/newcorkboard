@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Eloquent;
 use newcorkboard;
 
-class Link extends Eloquent
+class Link extends Model
 {
     //
     //Laravel models have a built-in protection mechanism against mass assignment vulnerability. The fillable property is used to declare the attribute names that can be mass assigned safely. 

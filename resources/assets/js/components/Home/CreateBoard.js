@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 export default class CreateBoard extends Component {
   render() {
@@ -37,25 +37,22 @@ export default class CreateBoard extends Component {
                 {/* Need to change href for proper route */}
                 <a href="{{ url('/home') }}">
                   {" "}
-                     <button
-                      value="Create New Board"
-                      type="submit"
-                      className="btn btn-primary"
-                      data-toggle="modal"
-                      id="createBoard"
-                    >
-                      Create New Board
-                    </button>
+                  <button
+                    value="Create New Board"
+                    type="submit"
+                    className="btn btn-primary"
+                    data-toggle="modal"
+                    id="createBoard"
+                  >
+                    Create New Board
+                  </button>
                   {/* <div id="errorModal"></div>
                   <div id="inviteModal"></div> */}
-
                 </a>
-
               </div>
             </div>
           </div>
         </form>
-
       </section>
     );
   }
