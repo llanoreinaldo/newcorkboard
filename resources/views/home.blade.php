@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h1>'s Dashboard</h1>  </div>
+                <div class="card-header"><h1>{{ Auth::user()->name }}'s Dashboard</h1>  </div>
 
                 <div class="card-body">
                 <table style="width:100%">
@@ -56,15 +56,4 @@
     </div>
 </div>
         <div id="createBoard"></div>
-
-
-<script type="text/javascript">
-// $('#newboardBtn').click(function(){
-//     $('#boardform').toggle();
-// });
-
-$('#newboardBtn').click(function(){
-    $('#boardform').toggle();
-});
-</script>
 @endsection
