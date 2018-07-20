@@ -4,10 +4,15 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Eloquent;
+use newcorkboard;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    public function boards() {
+        return $this->hasMany('Board');
+    }
 
     /**
      * The attributes that are mass assignable.

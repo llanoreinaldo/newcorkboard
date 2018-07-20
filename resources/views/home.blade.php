@@ -57,15 +57,4 @@
     </div>
 </div>
         <div id="createBoard"></div>
-
-
-<script type="text/javascript">
-// $('#newboardBtn').click(function(){
-//     $('#boardform').toggle();
-// });
-
-$('#newboardBtn').click(function(){
-    $('#boardform').toggle();
-});
-</script>
 @endsection
