@@ -12,21 +12,22 @@
                 <div class="card-body">
                 <table style="width:100%">
                 <tr>
-                <th>Board Name</th>
-                <th>Board ID</th>
-                <th>Last Updated</th>
+                    <th>Board ID</th>
+                    <th>Board Name</th>
+                    <th>Last Updated</th>
                 </tr>
                
                     @foreach($boards as $board)
                  <tr> 
                     <td>
-                        <a href="/boards/{{ $board->id }}">{{ $board->name }}</a>
-                    </td>
-                    <td>
                         <a href="/boards/{{ $board->id }}">{{ $board->id }}</a>
                     </td>
                     <td>
-                        <a href="/boards/{{ $board->updated_at }}">{{ $board->updated_at }}</a>
+                        <a>{{ $board->name }}</a>
+                    </td>
+                   
+                    <td>
+                        <a>{{ $board->updated_at }}</a>
                     </td>
                 </tr> 
                     @endforeach
