@@ -22,7 +22,11 @@
         "react-dom": "^16.4.1"
     },
     "dependencies": {
+        "ajv": "^6.5.2",
+        "jss": "^9.8.7",
         "laravel-echo": "^1.4.0",
+        "prop-types": "^15.6.2",
+        "react-jss": "^8.6.1",
         "react-router-dom": "^4.3.1",
         "yarn": "^1.7.0"
     }

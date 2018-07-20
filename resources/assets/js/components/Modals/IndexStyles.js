@@ -55,14 +55,5 @@ export default {
       },
     },
   
-    imageModal: {
-      padding: '0.4rem',
-  
-      '& img': {
-        display: 'block',
-        maxWidth: '100%',
-        height: 'auto',
-      },
-    },
   };
   

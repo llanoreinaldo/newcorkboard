@@ -13,7 +13,10 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-                
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
         <!-- CSRF Token -->
          <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -37,6 +40,8 @@
     <div id="collaborateImg"></div>
     <div id="contactUs"></div>
     <div id="homeLogoImg"></div>
+    <div id="errorModal"></div>
+    <div id="inviteModal"></div>
 
         <script src="{{mix('js/app.js')}}" ></script>
     </body>

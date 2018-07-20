@@ -18,7 +18,7 @@ export default {
         left: 0,
         bottom: 0,
         padding: '1rem',
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        backgroundColor: 'white',
         zIndex: '9999',
         opacity: 1,
         overflowX: 'hidden',
@@ -44,7 +44,7 @@ export default {
     // The modal window: a empty div, vertical and horizontal cenetered.
     modal: {
         width: '100%',
-        backgroundColor: '#fff',
+        backgroundColor: 'white',
         boxShadow: [0, 0, '0.625rem', 'rgba(0, 0, 0, 0.2)'],
 
         '@media (min-width: 576px)': {
@@ -52,40 +52,26 @@ export default {
         },
     },
 
-    // The close button: absolute positioning on top left of the
-    // browser window, white background square with a gray X.
-    closeButton: {
-        position: 'fixed',
-        top: 0,
-        right: 0,
-        background: '#fff',
-        width: '2.5rem',
-        height: '2.5rem',
-        padding: 0,
-        border: 0,
-        cursor: 'pointer',
-        outline: 0,
-        boxShadow: [0, 0, '0.625rem', 'rgba(0, 0, 0, 0.2)'],
-
-        '&:before, &:after': {
-            content: '""',
-            position: 'absolute',
-            top: '1.2rem',
-            left: '0.25rem',
-            width: '2rem',
-            height: '0.1rem',
-            backgroundColor: '#888',
-        },
-
-        '&:before': {
-            transform: 'rotate(45deg)'
-        },
-        '&:after': {
-            transform: 'rotate(-45deg)'
-        },
-
-        '&:hover:before, &:hover:after': {
-            backgroundColor: '#444',
-        },
+    modalHeader: {
+        padding: [2, 16],
+        backgroundColor: "white",
+        color: "white"
     },
-};
+
+    /* Modal Content */
+    modalContent: {
+        position: "relative",
+        backgroundColor: "white",
+        margin: "auto",
+        padding: 0,
+        border: [1, "solid", "#888"],
+        width: "80%"
+    },
+
+    modalFooter: {
+        padding: [2, 16],
+        backgroundColor: "#5cb85c",
+        color: "white"
+    }
+
+}
