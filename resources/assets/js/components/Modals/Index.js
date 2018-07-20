@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import injectSheet from 'react-jss';
 import styles from './IndexStyles';
 import ModalLauncher from './Modal Launcher/ModalLauncher';
-import CreateBoard from '../Home/CreateBoard'
+
 
 
 const ModalApp = ({ sheet: { classes } }) =>

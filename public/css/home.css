@@ -11,7 +11,7 @@ html {
 
 #createBoard {
   /* padding: 11px 50px; */
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 
 .border {
@@ -87,6 +87,10 @@ html {
 
 .ptext .border.trans {
   background-color: #0c95dac2;
+}
+
+th {
+  border: 1px solid black"
 }
 
 @media(max-width:568px) {

@@ -19201,23 +19201,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Home_CollaborateImg__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Home_LoginRegister__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Home_CreateBoard__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Home_OurPurpose__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Home_ContactUs__ = __webpack_require__(178);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Home_InviteModal__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Home_ErrorModal__ = __webpack_require__(361);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Auth_RegisterModal__ = __webpack_require__(362);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Auth_LoginModal__ = __webpack_require__(363);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Board_Filters__ = __webpack_require__(364);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Navbar__ = __webpack_require__(365);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_Cards__ = __webpack_require__(366);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Board_Announcements__ = __webpack_require__(367);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Board_BoardModals__ = __webpack_require__(368);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_Modals_Index__ = __webpack_require__(369);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_Modals_IndexStyles__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_Modals_Modal_Modal__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_Modals_Modal_ModalStyles__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_Modals_Modal_Launcher_ModalLauncher__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_Modals_Modal_Launcher_ModalLauncherStyle__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Home_CreateBoard_1__ = __webpack_require__(375);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Home_OurPurpose__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Home_ContactUs__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Home_InviteModal__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Home_ErrorModal__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Auth_RegisterModal__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Auth_LoginModal__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Filters__ = __webpack_require__(364);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_Navbar__ = __webpack_require__(365);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Board_Cards__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Board_Announcements__ = __webpack_require__(367);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_Board_BoardModals__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_Modals_Index__ = __webpack_require__(369);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_Modals_IndexStyles__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_Modals_Modal_Modal__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_Modals_Modal_ModalStyles__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_Modals_Modal_Launcher_ModalLauncher__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_Modals_Modal_Launcher_ModalLauncherStyle__ = __webpack_require__(89);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -19234,6 +19235,7 @@ __webpack_require__(137);
 // import Main from "./components/Main";
 
 //Home Imports
+
 
 
 
@@ -73275,8 +73277,6 @@ if (document.getElementById('boardModals')) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_jss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_jss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__IndexStyles__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Modal_Launcher_ModalLauncher__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Home_CreateBoard__ = __webpack_require__(176);
-
 
 
 
@@ -73367,6 +73367,160 @@ Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MOD
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_jss__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_jss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_jss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Modals_IndexStyles__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Modals_Modal_Launcher_ModalLauncher__ = __webpack_require__(25);
+
+
+
+
+
+
+
+var ModalApp = function ModalApp(_ref) {
+  var classes = _ref.sheet.classes;
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: classes.appWrapper },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'section section-dark' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h2',
+        null,
+        'Create Your Board'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'form',
+        { action: '/api/boards', method: 'POST', id: 'start-board' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'container' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'flex-row row justify-content-center' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'col-6-md col-12-xs', style: { marginRight: 10 } },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+                className: 'new-item form-control',
+                placeholder: 'Your New Board Name',
+                type: 'text',
+                id: 'boardName',
+                required: 'required',
+                name: 'name'
+              })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'col-4-md col-12-xs', style: { marginRight: 10 } },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+                className: 'new-item form-control',
+                pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$',
+                placeholder: 'Your Email',
+                type: 'email',
+                id: 'ownerEmail',
+                required: 'required',
+                name: 'email'
+              })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'col-4-md col-12-xs' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_5__Modals_Modal_Launcher_ModalLauncher__["a" /* default */],
+                { buttonLabel: 'Create New Board' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  { className: classes.textModal },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: classes.modalHeader },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'h5',
+                      { 'class': 'modal-title', id: 'modalInvite' },
+                      'Your Board URL: '
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: classes.modalContent },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'form',
+                      null,
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'form-group' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'label',
+                          { 'for': 'recipient-name', 'class': 'col-form-label' },
+                          'Send Invites To Your Board: (Use a Comma to Send to Multiple Email Address)'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'email', 'class': 'form-control', id: 'inviteEmails', required: 'required', placeholder: 'name@example.com, name2@example.com',
+                          multiple: true })
+                      ),
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'form-group' },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'label',
+                          { 'for': 'message-text', 'class': 'col-form-label' },
+                          'Message:'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('textarea', { 'class': 'form-control', id: 'inviteEmailMsg' })
+                      )
+                    )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: classes.modalFooter },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('button', { type: 'button', 'class': 'close', 'data-dismiss': 'modal', 'aria-label': 'Close' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'button',
+                      { type: 'button', 'class': 'btn btn-secondary', id: 'skipBtn', 'data-dismiss': 'modal' },
+                      'Skip'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'button',
+                      { type: 'button', 'class': 'btn btn-primary', id: 'sendInvites' },
+                      'Send Invite'
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  );
+};
+
+ModalApp.propTypes = {
+  sheet: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.object,
+  classes: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.object
+};
+
+var StyledApp = __WEBPACK_IMPORTED_MODULE_3_react_jss___default()(__WEBPACK_IMPORTED_MODULE_4__Modals_IndexStyles__["a" /* default */])(ModalApp);
+
+Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(StyledApp, null), document.getElementById("createBoard1"));
 
 /***/ })
 /******/ ]);
