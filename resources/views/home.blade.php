@@ -10,15 +10,28 @@
                 <div class="card-header"><h1>{{ Auth::user()->name }}'s Dashboard</h1>  </div>
 
                 <div class="card-body">
-
-                <ul>
+                <table style="width:100%">
+                <tr>
+                <th>Board Name</th>
+                <th>Board ID</th>
+                <th>Last Updated</th>
+                </tr>
+               
                     @foreach($boards as $board)
-                    <li>
+                 <tr> 
+                    <td>
                         <a href="/boards/{{ $board->id }}">{{ $board->name }}</a>
-                    </li>
+                    </td>
+                    <td>
+                        <a href="/boards/{{ $board->id }}">{{ $board->id }}</a>
+                    </td>
+                    <td>
+                        <a href="/boards/{{ $board->updated_at }}">{{ $board->updated_at }}</a>
+                    </td>
+                </tr> 
                     @endforeach
-                </ul>
-
+                
+                </table>
 
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
