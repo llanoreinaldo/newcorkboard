@@ -9,7 +9,7 @@
         
         <!-- Style Sheets -->
         <link href="{{mix('css/app.css')}}" rel="stylesheet" type="text/css">
-        <link href="{{asset('css/home.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/welcome.css')}}" rel="stylesheet" type="text/css">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -40,9 +40,7 @@
     <div id="collaborateImg"></div>
     <div id="contactUs"></div>
     <div id="homeLogoImg"></div>
-    <div id="errorModal"></div>
-    <div id="inviteModal"></div>
-
+    
         <script src="{{mix('js/app.js')}}" ></script>
     </body>
 </html>

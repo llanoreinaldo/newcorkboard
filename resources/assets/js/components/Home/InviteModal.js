@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import PropTypes from 'prop-types';
-import injectSheet from 'react-jss';
+
 import styles from '../Modals/IndexStyles';
 import ModalLauncher from '../Modals/Modal Launcher/ModalLauncher';
 
