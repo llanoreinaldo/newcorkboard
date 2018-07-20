@@ -14,9 +14,21 @@ class CreateBoardsTable extends Migration
     public function up()
     {
         Schema::create('boards', function (Blueprint $table) {
-            $table->bigIncrements('id', 8, 2)->unsigned();
+            $table->increments('id');
             $table->string('name', 100)->unique();
-            $table->string('email', 50);
+            
+            $table->foreign('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->foreign('link_id')->unsigned();
+            $table->foreign('link_id')->references('id')->on('links');
+
+            $table->foreign('message_id')->unsigned();
+            $table->foreign('message_id')->references('id')->on('messages');
+
+            $table->foreign('tag_id')->unsigned();
+            $table->foreign('tag_id')->references('id')->on('tags');
+
             $table->timestamps();
 
         });
