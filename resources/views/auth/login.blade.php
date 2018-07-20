@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/login.css') }}" rel="stylesheet"> 
+<br>
+<br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -57,7 +60,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-primary" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                             </div>

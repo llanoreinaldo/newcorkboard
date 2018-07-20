@@ -9,9 +9,9 @@ export default class Cards extends Component {
             <div class="main">
                 <div class="cardWrapper col-lg-12 col-md-8">
                     {/* {{#if board:links}} */}
-                <ul>
+                    <ul>
                         {/* {{#each board:links}} */}
-                <div class="card">
+                        <div class="card">
                             <div class="card-body">
                                 <br></br>
                                 <div class="row">
@@ -32,7 +32,7 @@ export default class Cards extends Component {
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                         <p>
                                             {/* {{#if image_url}} */}
-                            <img id="cardImgLinkNum{{id}}" class="card-img-top cardImg" src="{{image_url}}"> {/*{{/if}}*/}</img>
+                                            <img id="cardImgLinkNum{{id}}" class="card-img-top cardImg" src="{{image_url}}"> {/*{{/if}}*/}</img>
                                         </p>
                                     </div>
                                 </div>
@@ -48,10 +48,10 @@ export default class Cards extends Component {
                                                 </button>
                                             </div>
                                             <div class="tagsId tags{{id}}">
-                                                <h4 style={{float: left}}>Tags:</h4> {/*{{#each Tags}}*/} |
+                                                <h4 style={{ float: left }}>Tags:</h4> {/*{{#each Tags}}*/} |
                                     <a href="/boards/{{../../board.id}}/tags/{{id}}" data-tagId={{ id }}>{{ name }}</a>
                                                 {/* {{/ each}} */}
-                                </div>
+                                            </div>
                                         </small>
                                     </div>
 
@@ -59,9 +59,9 @@ export default class Cards extends Component {
                             </div>
                         </div>
                         {/* {{/ each}} */}
-        </ul>
+                    </ul>
                     {/* {{/if}} */}
-    </div>
+                </div>
             </div>
 
         );

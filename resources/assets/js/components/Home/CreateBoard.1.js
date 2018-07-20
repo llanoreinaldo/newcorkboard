@@ -1,13 +1,12 @@
 import React from 'react';
-import { render } from 'react-dom';
 import PropTypes from 'prop-types';
-import injectSheet from 'react-jss';
-import styles from '../Modals/IndexStyles';
 import ModalLauncher from '../Modals/Modal Launcher/ModalLauncher';
+import CreateBoard from './CreateBoard';
 
+class CreateItem extends Component {
+  render() {
+    return (
 
-const ModalApp = ({ sheet: { classes } }) =>
-  <div className={classes.appWrapper}>
     <div className="section section-dark">
 
       <h2>Create Your Board</h2>
@@ -40,13 +39,13 @@ const ModalApp = ({ sheet: { classes } }) =>
             </div>
             <div className="col-4-md col-12-xs">
               <ModalLauncher buttonLabel="Create New Board">
-                <div className={classes.textModal}>
-                  <div className={classes.modalHeader}>
+                <div className="modal">
+                  <div className="modal-header">
                     <h5 class="modal-title" id="modalInvite">Your Board URL: </h5>
                   </div>
 
                   {/* <!-- Modal Body --> */}
-                  <div className={classes.modalContent}>
+                  <div className="modal-body">
                     <form>
                       <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Send Invites To Your Board: (Use a Comma to Send to Multiple Email Address)</label>
@@ -61,7 +60,7 @@ const ModalApp = ({ sheet: { classes } }) =>
                   </div>
 
                   {/* <div class="modal-footer"> */}
-                  <div className={classes.modalFooter}>
+                  <div className="modal-footer">
 
                     {/* <!-- Close Button on Modal --> */}
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -82,13 +81,13 @@ const ModalApp = ({ sheet: { classes } }) =>
         </div>
       </form>
     </div>
-  </div>
+      )
+    }
+}
 
 ModalApp.propTypes = {
   sheet: PropTypes.object,
   classes: PropTypes.object
 };
 
-const StyledApp = injectSheet(styles)(ModalApp);
-
-render(<StyledApp />, document.getElementById("createBoard1"));
+export default CreateBoard
