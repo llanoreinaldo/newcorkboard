@@ -19,4 +19,5 @@ export default class OurPurpose extends Component {
 
 if (document.getElementById('ourPurpose')) {
     ReactDOM.render(<OurPurpose />, document.getElementById('ourPurpose'));
+    
 }
