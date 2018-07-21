@@ -45,7 +45,7 @@ class BoardsController extends Controller
     public function update(Request $request, Board $board)
     {
         $board->update($request->all());
- 
+  
         return response()->json($board, 200);
     }
  
