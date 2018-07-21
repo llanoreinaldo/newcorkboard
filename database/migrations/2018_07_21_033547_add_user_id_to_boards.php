@@ -13,9 +13,9 @@ class AddUserIdToBoards extends Migration
      */
     public function up()
     {
-        Schema::table('boards', function($table){
-            $table->integer('user_id');
-        });
+        // Schema::table('boards', function($table){
+        //     $table->integer('user_id');
+        // });
     }
 
     /**
@@ -25,8 +25,8 @@ class AddUserIdToBoards extends Migration
      */
     public function down()
     {
-        Schema::table('boards', function($table){
-            $table->dropColumn('user_id');
-        });
+        // Schema::table('boards', function($table){
+        //     $table->dropColumn('user_id');
+        // });
     }
 }
