@@ -19,12 +19,16 @@
                     <th>Board Name</th>
                     <th>Created by</th>
                     <th>Last Updated</th>
+                    <th> </th>
                 </tr>
                
+               <!-- Assign the $boards variable from the boardscontroller to 
+               a new variable called board -->
+               @if(count($boards) > 0)
                 @foreach($boards as $board)
                 <tr> 
                     <td>
-                        <a href="/boards/{{ $board->id }}">{{ $board->id }}</a>
+                        <a href="/home/{{ $board->id }}">{{ $board->id }}</a>
                     </td>
                     <td>
                         <a>{{ $board->name }}</a>
@@ -35,11 +39,20 @@
                     </td>
                     
                     <td>
-                        <a>{{ $board->updated_at }}</a>
+                        <a>{{ $board->updated_at->format('m-d-Y') }}</a>
                     </td>
+                    <td>
+                    <form action="/api/board/{$board}" method="DELETE">
+                    <button type='submit'><i class="fas fa-trash-alt" style="color:red;"></i></a></button>
+                    </td>
+                    </form>
                 </tr> 
                 @endforeach
-                
+                {{$boards->links()}}
+            @else
+            <center><p>You haven't created any boards</p></center>
+            @endif
+            
                 </table>
 
                     @if (session('status'))

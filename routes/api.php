@@ -25,13 +25,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
     //Board Routes
-Route::get('boards', 'BoardsController@index');
+// Route::get('boards', 'BoardsController@index');
 
-Route::get('boards/{board}', 'BoardsController@show');
+// Route::get('boards/{board}', 'BoardsController@show');
     
 Route::post('boards','BoardsController@store');
     
-Route::put('board/{board}','BoardsController@update');
+// Route::put('board/{board}','BoardsController@update');
     
 Route::delete('board/{board}', 'BoardsController@delete');
 

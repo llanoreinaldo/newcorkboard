@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Eloquent;
 use newcorkboard;
 
-class Board extends Eloquent
+class Board extends Model
 {
     //
     //Laravel models have a built-in protection mechanism against mass assignment vulnerability. The fillable property is used to declare the attribute names that can be mass assigned safely. 
@@ -15,4 +15,7 @@ class Board extends Eloquent
     protected $fillable = ['name', 'email'];
     protected $hidden = ['email',];
 
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }
