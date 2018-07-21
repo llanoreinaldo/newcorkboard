@@ -113,6 +113,12 @@ th {
   color: #ddd;
 }
 
+/*///////TABLES///// */
+table {
+  width: 100%
+}
+
+
 @media(max-width:568px) {
   .home-logo-img,
   .get-organized-img,

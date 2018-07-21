@@ -13,7 +13,7 @@
                 <div class="card-header"><h1>{{ Auth::user()->name }}'s Dashboard</h1>  </div>
 
                 <div class="card-body">
-                <table style="width:100%">
+                <table>
                 <tr>
                     <th>Board ID</th>
                     <th>Board Name</th>
