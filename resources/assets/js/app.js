@@ -19,11 +19,9 @@ import GetOrganizedImg from './components/Home/GetOrganizedImg';
 import CollaborateImg from './components/Home/CollaborateImg';
 import LoginRegister from './components/Home/LoginRegister';
 import CreateBoard from './components/Home/CreateBoard';
-import StyledApp from './components/Home/CreateBoard.1';
 import OurPurpose from './components/Home/OurPurpose';
 import ContactUs from './components/Home/ContactUs';
-import InviteModal from './components/Home/InviteModal';
-import ErrorModal from './components/Home/ErrorModal';
+
 
 //Auth Imports
 
