@@ -56102,19 +56102,6 @@ var CreateBoard = function (_Component) {
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "col-4-md col-12-xs", style: { marginRight: 10 } },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-                  className: "new-item form-control",
-                  pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$",
-                  placeholder: "Your Email",
-                  type: "email",
-                  id: "ownerEmail",
-                  required: "required",
-                  name: "email"
-                })
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
                 { className: "col-4-md col-12-xs" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "a",
@@ -56197,7 +56184,7 @@ var OurPurpose = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'p',
                     null,
-                    'It\'s our hope that through our app you can better pool resources with teammates, friends, and classmates as you work together.'
+                    'It\'s our hope that through our app you can better pool resources with teammates, friends, and classmates as you work\xA0together.'
                 )
             );
         }

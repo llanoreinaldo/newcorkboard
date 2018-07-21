@@ -22,7 +22,7 @@ export default class CreateBoard extends Component {
                   name="name"
                 />
               </div>
-              <div className="col-4-md col-12-xs" style={{ marginRight: 10 }}>
+              {/* <div className="col-4-md col-12-xs" style={{ marginRight: 10 }}>
                 <input
                   className="new-item form-control"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
@@ -32,7 +32,7 @@ export default class CreateBoard extends Component {
                   required="required"
                   name="email"
                 />
-              </div>
+              </div> */}
               <div className="col-4-md col-12-xs">
                 {/* Need to change href for proper route */}
                 <a href="home">
