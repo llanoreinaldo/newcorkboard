@@ -2,7 +2,9 @@
 
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<link href="{{ asset('css/home.css') }}" rel="stylesheet"> 
+<br>
+<br>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -11,7 +13,7 @@
                 <div class="card-header"><h1>{{ Auth::user()->name }}'s Dashboard</h1>  </div>
 
                 <div class="card-body">
-                <table style="width:100%">
+                <table>
                 <tr>
                     <th>Board ID</th>
                     <th>Board Name</th>

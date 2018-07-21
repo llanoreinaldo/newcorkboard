@@ -5,17 +5,13 @@
  */
 
 require("./bootstrap");
-import React from 'react';
-import { render } from 'react-dom';
-import { Router, Route } from 'react-router';
+
 
 /**
  * Next, we will create a fresh React component instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-// import Master from "./components/Master";
-
 
 //Home Imports
 import HomeLogo from './components/Home/HomeLogo';
@@ -23,11 +19,9 @@ import GetOrganizedImg from './components/Home/GetOrganizedImg';
 import CollaborateImg from './components/Home/CollaborateImg';
 import LoginRegister from './components/Home/LoginRegister';
 import CreateBoard from './components/Home/CreateBoard';
-import StyledApp from './components/Home/CreateBoard.1';
 import OurPurpose from './components/Home/OurPurpose';
 import ContactUs from './components/Home/ContactUs';
-import InviteModal from './components/Home/InviteModal';
-import ErrorModal from './components/Home/ErrorModal';
+
 
 //Auth Imports
 
@@ -42,20 +36,3 @@ import Cards from './components/Board/Cards';
 import Announcements from './components/Board/Announcements'
 import BoardModals from './components/Board/BoardModals'
 
-//Modals Imports
-import Index from "./components/Modals/Index";
-import IndexStyles from "./components/Modals/IndexStyles";
-
-import Modal from './components/Modals/Modal/Modal';
-import ModalStyles from './components/Modals/Modal/ModalStyles';
-import ModalLauncher from './components/Modals/Modal Launcher/ModalLauncher'
-import ModalLauncherStyle from './components/Modals/Modal Launcher/ModalLauncherStyle'
-
-
-// render(
-//     <Router>
-//         <Route path="/" component={Master} >
-//           <Route path="/add-item" component={CreateItem} />
-//         </Route>
-//       </Router>,
-//           document.getElementById('example'));
