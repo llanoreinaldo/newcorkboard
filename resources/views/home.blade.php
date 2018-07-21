@@ -2,7 +2,9 @@
 
 @section('content')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<link href="{{ asset('css/home.css') }}" rel="stylesheet"> 
+<br>
+<br>
 
 <div class="container">
     <div class="row justify-content-center">
