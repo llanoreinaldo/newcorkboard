@@ -17306,123 +17306,6 @@ if (token) {
       return (index && index == length) ? object : undefined;
     }
 
-<<<<<<< HEAD
-    return null;
-  };
-
-  return Route;
-}(__WEBPACK_IMPORTED_MODULE_2_react___default.a.Component);
-
-Route.propTypes = {
-  computedMatch: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object, // private, from <Switch>
-  path: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.string,
-  exact: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
-  strict: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
-  sensitive: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.bool,
-  component: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
-  render: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func,
-  children: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.oneOfType([__WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.func, __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.node]),
-  location: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object
-};
-Route.contextTypes = {
-  router: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.shape({
-    history: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired,
-    route: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired,
-    staticContext: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object
-  })
-};
-Route.childContextTypes = {
-  router: __WEBPACK_IMPORTED_MODULE_3_prop_types___default.a.object.isRequired
-};
-
-
-/* harmony default export */ __webpack_exports__["a"] = (Route);
-
-/***/ }),
-/* 79 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var CreateBoard = function (_Component) {
-  _inherits(CreateBoard, _Component);
-
-  function CreateBoard() {
-    _classCallCheck(this, CreateBoard);
-
-    return _possibleConstructorReturn(this, (CreateBoard.__proto__ || Object.getPrototypeOf(CreateBoard)).apply(this, arguments));
-  }
-
-  _createClass(CreateBoard, [{
-    key: "render",
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "section",
-        { className: "section section-dark" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "h2",
-          null,
-          "Create Your Board"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "form",
-          { action: "/api/boards", method: "POST", id: "start-board" },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "container" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { className: "flex-row row justify-content-center" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "col-6-md col-12-xs", style: { marginRight: 10 } },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
-                  className: "new-item form-control",
-                  placeholder: "Your New Board Name",
-                  type: "text",
-                  id: "boardName",
-                  required: "required",
-                  name: "name"
-                })
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "col-4-md col-12-xs" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "a",
-                  { href: "home" },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "button",
-                    {
-                      value: "Create New Board",
-                      type: "submit",
-                      className: "btn btn-primary",
-                      "data-toggle": "modal",
-                      id: "createBoard"
-                    },
-                    "Create New Board"
-                  )
-                )
-              )
-            )
-          )
-        )
-      );
-=======
     /**
      * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
      * `keysFunc` and `symbolsFunc` to get the enumerable property names and
@@ -17437,7 +17320,6 @@ var CreateBoard = function (_Component) {
     function baseGetAllKeys(object, keysFunc, symbolsFunc) {
       var result = keysFunc(object);
       return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
->>>>>>> 7e1010260d05deb77e04706e7e1c52f542d38eb9
     }
 
     /**
@@ -56220,11 +56102,23 @@ var CreateBoard = function (_Component) {
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
+                { className: "col-4-md col-12-xs", style: { marginRight: 10 } },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", {
+                  className: "new-item form-control",
+                  pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$",
+                  placeholder: "Your Email",
+                  type: "email",
+                  id: "ownerEmail",
+                  required: "required",
+                  name: "email"
+                })
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
                 { className: "col-4-md col-12-xs" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "a",
-                  { href: "{{ url('/home') }}" },
-                  " ",
+                  { href: "home" },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "button",
                     {
