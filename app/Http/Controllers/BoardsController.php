@@ -44,11 +44,12 @@ class BoardsController extends Controller
         return response()->json($board, 200);
     }
  
-    public function delete(Board $board)
+    public function delete($id)
     {
+        $board = Board::find($id);
         $board->delete();
+        return redirect('home')->with('success', 'Board Removed');
  
-        return response()->json(null, 204);
     }
  
 }

@@ -33,7 +33,7 @@ Route::post('boards','BoardsController@store');
     
 // Route::put('board/{board}','BoardsController@update');
     
-// Route::delete('board/{board}', 'BoardsController@delete');
+Route::delete('board/{board}', 'BoardsController@delete');
 
     //Link Routes
 Route::get('links', 'LinksController@index');

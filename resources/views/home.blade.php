@@ -17,6 +17,7 @@
                     <th>Board Name</th>
                     <th>Created by</th>
                     <th>Last Updated</th>
+                    <th> </th>
                 </tr>
                
                <!-- Assign the $boards variable from the boardscontroller to 
@@ -38,12 +39,18 @@
                     <td>
                         <a>{{ $board->updated_at->format('m-d-Y') }}</a>
                     </td>
+                    <td>
+                    <form action="/api/board/{$board}" method="DELETE">
+                    <button type='submit'><i class="fas fa-trash-alt" style="color:red;"></i></a></button>
+                    </td>
+                    </form>
                 </tr> 
                 @endforeach
                 {{$boards->links()}}
             @else
             <center><p>You haven't created any boards</p></center>
             @endif
+            
                 </table>
 
                     @if (session('status'))
