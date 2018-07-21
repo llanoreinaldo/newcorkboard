@@ -10,10 +10,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h1>{{ Auth::user()->name }}'s Dashboard</h1>  </div>
-
+                <div class="card-header">
+                    <h1>{{ Auth::user()->name }}'s Dashboard</h1>
+                    <button type="button" class="btn btn-primary" id="newboard">New Board</button>
+                </div>
                 <div class="card-body">
-                <table>
+                <table id="boardList">
                 <tr>
                     <th>Board ID</th>
                     <th>Board Name</th>
@@ -54,6 +56,25 @@
             @endif
             
                 </table>
+                <div class="form-group" id="newBoardForm" style="display:none;">
+                <form action="/api/boards" method="POST">
+                @csrf
+                  <label for="name"></label>
+                  <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Board name">
+                  <center><a href="home"><button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button></a></center>
+                  <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                </div>
+                </form>
+                <!-- <center>
+                <form action="" id="newBoardForm" style="display:none;">
+                    <input type="text" name="name" placeholder="Board Name">
+                    <br>
+                    <button type="button" class="btn btn-primary"></button>
+                
+                </form>
+                </center> -->
+
+
 <!-- //trying to put a success message -->
                     <!-- @if (\Session::has('success'))
                         <div class="alert alert-success">
@@ -73,7 +94,19 @@
         </div>
     </div>
 </div>
-        <div id="createBoard"></div>
+<script>
 
+    $('#newboard').click(function(){
+        $('#boardList').hide();
+        $('#newBoardForm').show();
+        $('#newboard').hide();
+    });
+
+    $('#boardSubmit').click(function(){
+        $('#newboard').show();
+    });
+
+
+</script>
   
 @endsection
