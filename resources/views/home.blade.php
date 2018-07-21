@@ -40,10 +40,10 @@
                         <a>{{ $board->updated_at->format('m-d-Y') }}</a>
                     </td>
                     <td>
-                    <form action="/api/board/{$board}" method="DELETE">
+                    <a href="/board/delete">
                     <button type='submit'><i class="fas fa-trash-alt" style="color:red;"></i></a></button>
+                    </button>
                     </td>
-                    </form>
                 </tr> 
                 @endforeach
                 {{$boards->links()}}
@@ -52,12 +52,14 @@
             @endif
             
                 </table>
-
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+<!-- //trying to put a success message -->
+                    <!-- @if (\Session::has('success'))
+                        <div class="alert alert-success">
+                            <ul>
+                                <li>{!! \Session::get('success') !!}</li>
+                            </ul>
                         </div>
-                    @endif
+                    @endif -->
 
                     <!-- You are logged in! -->
                     <!-- <hr> -->

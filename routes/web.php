@@ -27,4 +27,5 @@ Auth::routes();
 
 // Route::get('/home', 'BoardsController@index')->name('boards');
 // Route::get('/home/{board}', 'BoardsController@show');
+
 Route::resource('home', 'BoardsController');

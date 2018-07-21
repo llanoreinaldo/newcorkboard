@@ -33,6 +33,11 @@ class BoardsController extends Controller
     public function store(Request $request)
     {
         $board = Board::create($request->all());
+        // $board = new Board;
+        // $board->name = $request->input('name');
+        // $board->user_id = auth()->user['id'];
+        // $board->save();
+
         return redirect('home');
         // return response()->json($board, 201);
     }

@@ -78,6 +78,9 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    <a class="dropdown-item" href="home">
+                                        Dashboard
+                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
@@ -91,7 +94,6 @@
         </nav>
 
         <main class="py-4">
-            @include('inc.messages')
             @yield('content')
         </main>
     </div>

@@ -35,8 +35,7 @@ export default class CreateBoard extends Component {
               </div> */}
               <div className="col-4-md col-12-xs">
                 {/* Need to change href for proper route */}
-                <a href="{{ url('/home') }}">
-                  {" "}
+                <a href="home">
                   <button
                     value="Create New Board"
                     type="submit"

@@ -17210,8 +17210,7 @@ var CreateBoard = function (_Component) {
                 { className: "col-4-md col-12-xs" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "a",
-                  { href: "{{ url('/home') }}" },
-                  " ",
+                  { href: "home" },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "button",
                     {
