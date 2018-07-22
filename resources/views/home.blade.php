@@ -34,21 +34,20 @@
                     <td>
                         <a>{{ $board->name }}</a>
                     </td>
-                   
                     <td>
                         {{ $board->user_id}}
                     </td>
-                    
                     <td>
                         <a>{{ $board->updated_at->format('m-d-Y') }}</a>
                     </td>
                     <td>
                     <a href="/board/delete">
-                    <button type='submit'><i class="fas fa-trash-alt" style="color:red;"></i></a></button>
-                    </button>
+                    <button type='submit'><i class="fas fa-trash-alt" style="color:red;"></i></button>
+                    </a>
                     </td>
                     <td>
-                    <button type="submit" data-toggle="modal" data-target="#inviteModal"><i class="fas fa-envelope-square" style="color:blue;"></i></a></button>
+                    <button type="submit" data-toggle="modal" data-target="#inviteModal">
+                    <i class="fas fa-envelope-square" style="color:blue;"></i>
                     </button>
                     </td>
                     </tr> 
@@ -108,10 +107,10 @@
 
 <!--Modal that Displays URL and Sends E-mail Invite -->
 <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalInvite">Your Board URL: </h5>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header section-dark">
+          <h5 class="modal-title" id="modalInvite">Your Board URL:<a href="/home/{{ $board->id }}">{{ $board->id }}</a></h5>
         </div>
 
         <!-- Modal Body -->
@@ -141,7 +140,8 @@
       </div>
     </div>
   </div>
-      </div>
+</div>
+
     </div>
   </div>
 </div>                  
