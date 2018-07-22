@@ -1,3 +1,6 @@
+import board from "../../resources/assets/js/board.js"
+import home from "../../resources/assets/js/home.js"
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
