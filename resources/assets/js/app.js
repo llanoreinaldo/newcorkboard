@@ -5,7 +5,8 @@
  */
 
 require("./bootstrap");
-
+require("./board")
+require("./home")
 
 /**
  * Next, we will create a fresh React component instance and attach it to

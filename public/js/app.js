@@ -1,6 +1,3 @@
-import board from "../../resources/assets/js/board.js"
-import home from "../../resources/assets/js/home.js"
-
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -14156,6 +14153,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 
 __webpack_require__(20);
+__webpack_require__(76);
+__webpack_require__(77);
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -57460,6 +57459,356 @@ if (document.getElementById('boardModals')) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */
+/***/ (function(module, exports) {
+
+$('document').ready(function () {
+    // console.log('ready')
+    var urlField = void 0;
+    //filter buttons
+    $('#filter, .filterBtn').click(function () {
+        $('.filterCard').toggle('blind');
+        $('#close').show();
+        $('#filter').hide();
+        $('#dropAnnounce').hide('blind');
+    });
+
+    //show/hide announcements
+    $('#announce').click(function () {
+        $('#dropAnnounce').show('blind');
+        $('.onPlusClose').show();
+        $('#closeAnn').toggle();
+        $('#announce, #close, .filterCard').hide();
+        // $('#filter').show();
+    });
+
+    $('#closeAnn').click(function () {
+        $('#dropAnnounce').hide('blind');
+        $('#announce').show();
+        $('#closeAnn').hide();
+    });
+
+    //Small menu button
+    $('.smallMenu').click(function () {
+        $('#dropAnnounce, .filterCard, #closeAnn').hide();
+        $('#announce').show();
+    });
+
+    //Small add button
+    $('.smallAdd').click(function () {
+        $('#closeAnn, #close, #dropAnnounce, .onPlusClose').hide();
+        $('#announce').show();
+    });
+    //X for close
+    $('#close').click(function () {
+        $('.filterCard').hide('blind');
+        $('#filter').show();
+        $('#close').hide();
+    });
+
+    //close filter when clicking topMenu buttons
+    $('.newLink, .newLink2').click(function () {
+        $('.filterCard').hide('blind');
+        $('#filter').show();
+        $('#close').hide();
+    });
+
+    $('.newLink2').click(function () {
+        $('#filter').hide();
+    });
+    //delete link
+    $('.cardDelete').click(function (event) {
+        var linkId = $(event.target).attr("data-linkId");
+        var boardId = $('#boardName').attr("data-boardId");
+        $.ajax({
+            method: "DELETE",
+            url: '/api/boards/' + boardId + '/links/' + linkId,
+            success: function success(results) {
+                location.reload();
+            }
+        });
+    });
+
+    //topic submit function
+    $('.link').click(function (e) {
+        e.preventDefault();
+        var id = $('#boardName').attr("data-boardId");
+        var field = $('#title').val().trim();
+        // console.log(field);
+        var data = {
+            name: field
+        };
+        $.post('/api/boards/' + id + '/tags/new', data, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+    //post submit function
+    $('.postButton').click(function (e) {
+        var id = $('#boardName').attr("data-boardId");
+        e.preventDefault();
+        var newTitle = $('#postTitle').val().trim();
+        var newUrl = $('#postUrl').val().trim();
+        var newDescription = $('#postDescription').val().trim();
+        var newImageUrl = $('#postImgUrl').val().trim();
+
+        var data = {
+            title: newTitle,
+            description: newDescription,
+            url: newUrl,
+            image_url: newImageUrl
+        };
+        var tags = [];
+        //loop through checkboxes and push checked box values to array
+        $('.postTags').find('input').each(function (index, element) {
+            if ($(element).is(":checked")) {
+                tags.push($(element).val());
+            }
+        });
+
+        data.tags = tags;
+
+        $.post('/api/boards/' + id + '/links/new', data, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+    //submit edit card data to DB
+    $('.editButton').click(function (e) {
+        var boardId = $('#boardName').attr("data-boardId");
+        var linkId = $(e.target).attr('data-linkid');
+        var data = {
+            title: $('#editTitle').val().trim(),
+            url: $('#editUrl').val().trim(),
+            description: $('#editDescription').val().trim(),
+            image_url: $('#editImgUrl').val().trim()
+        };
+
+        var tags = [];
+        //loop through checkboxes and push checked box values to array
+        $('.editTags').find('input').each(function (index, element) {
+            if ($(element).is(":checked")) {
+                tags.push($(element).val());
+            }
+        });
+        if (tags.length > 0) {
+            data.tags = tags;
+        } else {
+            data.tags = null;
+        }
+
+        //console.log(linkId, data);
+        $.ajax({
+            method: "PUT",
+            url: '/api/boards/' + boardId + '/links/' + linkId,
+            data: data,
+            success: function success(results) {
+                location.reload();
+            }
+        });
+    });
+
+    //populates edit modal with data
+    $('.cardEdit').click(function (e) {
+        //grab card data
+        var linkId = $(e.target).attr("data-linkid").trim();
+        var title = $('#cardTitleLinkNum' + linkId).text().trim();
+        var url = $('#cardUrlLinkNum' + linkId).text().trim();
+        var desc = $('#cardDescLinkNum' + linkId).text().trim();
+        var imgUrl = $('#cardImgLinkNum' + linkId).attr("src");
+        if (imgUrl) {
+            imgUrl = imgUrl.trim();
+        }
+
+        var currentTags = [];
+        //grab current tags off of card
+        $('.tags' + linkId).find('a').each(function (index, element) {
+            currentTags.push($(element).attr("data-tagid"));
+        });
+
+        //loop through checkboxes and check those that are currently tags of card
+        $('.editTags').find('input').each(function (index, element) {
+            if (currentTags.indexOf($(element).val()) > -1) {
+                $(element).prop("checked", true);
+            } else {
+                $(element).prop("checked", false);
+            }
+        });
+
+        //populate edit modal fields with current card data
+        $('#editTitle').val(title);
+        $('#editUrl').val(url);
+        $('#editDescription').val(desc);
+        $('#editImgUrl').val(imgUrl);
+        $('.editButton').attr("data-linkid", linkId);
+    });
+
+    //add a announcement
+    $('.announcementButton').click(function (e) {
+        var id = $('#boardName').attr("data-boardId");
+        e.preventDefault();
+        var newMsg = $('#postMsg').val().trim();
+        var newAuthor = $('#postAuthor').val().trim();
+        console.log(newMsg);
+        var data = {
+            msg: newMsg,
+            author: newAuthor
+        };
+        $.post('/api/boards/' + id + '/msgs/new', data, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+    //edit message
+    $('.editSubmit').click(function (e) {
+        var id = $('#boardName').attr("data-boardId");
+        var msgId = $('.cardDescription').attr('data-descId');
+        e.preventDefault();
+        var updateMsg = $('#putMsg').val().trim();
+        //var updateAuthor = $('#putAuthor').val().trim();
+
+        var data = {
+            msg: updateMsg
+            //author: updateAuthor
+        };
+        $.put('/api/boards/' + id + '/msgs/' + id.description, data, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+    //this fx scrapes meta data when url info is entered into the add bookmark url field
+    $('#postUrl').change(function (event) {
+        var urlInput = event.target.value;
+        if (!urlInput.startsWith('http')) {
+            urlInput = 'http://' + urlInput;
+            //$('#postUrl').val(urlInput);
+        }
+        if (urlInput !== urlField) {
+            urlField = urlInput;
+            // console.log(urlField);
+            $.post('/api/scrape', {
+                url: urlField
+            }, function (data) {
+                // console.log(data);
+                $('#postTitle').val(data.title);
+                $('#postDescription').val(data.description);
+                $('#postUrl').val(data.url);
+                $('#postImgUrl').val(data.image);
+            });
+        }
+    });
+
+    //this function searches by multiple tags
+    $('#tagSearch').click(function () {
+        var boardId = $('#boardName').attr("data-boardId");
+        var checkedTags = [];
+        $('.filterButtons').find('input').each(function (index, element) {
+            if ($(element).is(':checked')) {
+                var tagId = $(element).val();
+                checkedTags.push(tagId);
+            }
+        });
+        var data = {
+            tags: checkedTags
+        };
+        $.post('/boards/' + boardId + '/tags', data, function (results) {
+            //console.log(results);
+            if ($.isEmptyObject(results)) {
+                $("#editTopicModalLabel").text("Please Select Tags to include in Search");
+                $("#editTagSubmit").hide();
+                $("#editTagModalName").hide();
+                $('#editTopicModal').modal();
+            } else {
+                $('body').html(results);
+            }
+        });
+    });
+
+    $('#tagDelete').click(function () {
+        var boardId = $('#boardName').attr("data-boardId");
+        var checkedTags = [];
+        var tagId = void 0;
+        $('.filterButtons').find('input').each(function (index, element) {
+            if ($(element).is(':checked')) {
+                tagId = $(element).val();
+                checkedTags.push(tagId);
+            }
+        });
+        if (checkedTags.length === 1) {
+            $.ajax({
+                method: "DELETE",
+                url: '/api/boards/' + boardId + '/tags/' + tagId,
+                success: function success(results) {
+                    location.reload();
+                }
+            });
+        } else {
+            $("#editTopicModalLabel").text("Please Select One Tag to Delete");
+            $("#editTagSubmit").hide();
+            $("#editTagModalName").hide();
+            $('#editTopicModal').modal();
+        }
+    });
+
+    //populate and validate edit tag modal
+    $('#tagEdit').click(function () {
+        var checkedTags = 0;
+        var tagName = void 0;
+        var tagId = void 0;
+        $('.filterButtons').find('input').each(function (index, element) {
+            if ($(element).is(':checked')) {
+                tagName = $(element).closest('label').text();
+                tagId = $(element).val();
+                checkedTags++;
+            }
+        });
+        if (checkedTags !== 1) {
+            $("#editTopicModalLabel").text("Please Select One Tag to Edit");
+            $("#editTagSubmit").hide();
+            $("#editTagModalName").hide();
+            $('#editTopicModal').modal();
+        } else {
+            $("#editTopicModalLabel").text("Edit Tag Name:");
+            $("#editTagSubmit").attr("data-tagId", tagId).show();
+            $("#editTagModalName").val(tagName.trim()).show();
+            $('#editTopicModal').modal();
+        }
+    });
+
+    //send tag edit to server
+    $("#editTagSubmit").click(function (e) {
+        var boardId = $('#boardName').attr("data-boardId");
+        var tagId = $(e.target).attr("data-tagId");
+        var newTagName = $("#editTagModalName").val();
+        var data = {
+            name: newTagName
+        };
+        $.ajax({
+            method: "PUT",
+            url: '/api/boards/' + boardId + '/tags/' + tagId,
+            data: data,
+            success: function success(results) {
+                location.reload();
+            }
+        });
+    });
+}); //end document.ready
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports) {
+
+
 
 /***/ })
 /******/ ]);
