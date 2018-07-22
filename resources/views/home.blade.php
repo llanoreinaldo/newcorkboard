@@ -10,10 +10,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><h1>{{ Auth::user()->name }}'s Dashboard</h1>  </div>
-
+                <div class="card-header">
+                    <h1>{{ Auth::user()->name }}'s Dashboard</h1>
+                    <button type="button" class="btn btn-primary" id="newboard">New Board</button>
+                    <button type="button" class="btn btn-primary" id="boardCancel" style="display:none;">Back</button>
+                </div>
                 <div class="card-body">
-                <table>
+                <table id="boardList">
                 <tr>
                     <th>Board ID</th>
                     <th>Board Name</th>
@@ -35,7 +38,7 @@
                     </td>
                    
                     <td>
-                        <!-- <a>$users</a> -->
+                        {{ $board->user_id}}
                     </td>
                     
                     <td>
@@ -54,6 +57,19 @@
             @endif
             
                 </table>
+                <div class="form-group" id="newBoardForm" style="display:none;">
+                <form action="/api/boards" method="POST">
+                @csrf
+                  <label for="name"></label>
+                  <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Enter the board name">
+                  <small id="helpId" class="form-text text-muted">Board names must be unique</small>
+                  <center><a href="home"><button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button></a></center>
+
+                </div>
+                </form>
+                
+
+
 <!-- //trying to put a success message -->
                     <!-- @if (\Session::has('success'))
                         <div class="alert alert-success">
@@ -73,7 +89,28 @@
         </div>
     </div>
 </div>
-        <div id="createBoard"></div>
+<script>
 
+    $('#newboard').click(function(){
+        $('#boardList').hide();
+        $('#newBoardForm').show();
+        $('#newboard').hide();
+        $('#boardCancel').show();
+
+    });
+
+    $('#boardSubmit').click(function(){
+        $('#newboard').show();
+    });
+
+     $('#boardCancel').click(function(){
+        $('#newBoardForm').hide();
+        $('#boardList').show();
+        $('#newboard').show();
+        $('#boardCancel').hide()
+     })
+
+
+</script>
   
 @endsection
