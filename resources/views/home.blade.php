@@ -98,11 +98,11 @@
                     <a href="home"><button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button></a>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </center>  
-            </form>
+                </form>
             </div>
       </div>
-      
     </div>
+  </div>
 </div>
 
 <!--Modal that Displays URL and Sends E-mail Invite -->
@@ -110,30 +110,28 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header section-dark">
-          <h5 class="modal-title" id="modalInvite">Your Board URL:<a href="/home/{{ $board->id }}">{{ $board->id }}</a></h5>
+          <h5 class="modal-title" id="exampleModalLabel">Your Board URL:<a href="/home/{{ $board->id }}">{{ $board->id }}</a></h5>
         </div>
 
         <!-- Modal Body -->
         <div class="modal-body">
+        <div class="form-group" id="inviteForm">
           <form>
-            <div class="form-group">
               <label for="recipient-name" class="col-form-label">Send Invites To Your Board: (Use a Comma to Send to Multiple Email Address)</label>
               <input type="email" class="form-control" id="inviteEmails" required="required" placeholder="name@example.com, name2@example.com"
                 multiple>
-            </div>
-            <div class="form-group">
+              <hr>
               <label for="message-text" class="col-form-label">Message:</label>
               <textarea class="form-control" id="inviteEmailMsg"></textarea>
-            </div>
           </form>
-
+        </div>
           <div class="modal-footer">
             <!-- Close Button on Modal -->
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <!-- <span aria-hidden="true">&times;</span> -->
             </button>
             <!-- Send Message Button on Modal -->
-            <button type="button" class="btn btn-secondary" id="skipBtn" data-dismiss="modal">Skip</button>
+            <button type="button" class="btn btn-secondary" id="closeBtn" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary" id="sendInvites">Send Invite</button>
           </div>
         </div>
@@ -147,5 +145,55 @@
 </div>                  
 </div>
 
+<script>
+$('#sendInvites').click((e)=> {
+        e.preventDefault();
+        let modalUrlMsg = boardUrl;
+        let boardName = $('#modalInvite').attr("data-boardName");
+        let aTag = actualUrl;
+        let emailList = $('#inviteEmails').val().trim();
+        let emailMsg = $('#inviteEmailMsg').val().trim();
+        if(emailList) {
+            $('#inviteEmails').val("");
+            $('#inviteEmailMsg').val("");
+            let emailArr = emailList.split(",");
+            let emailRegex = /^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$)/;
+            for(let i = 0; i < emailArr.length; i++) {
+                if(!emailRegex.test(emailArr[i])) {
+                    return $('#modalInvite').html("<h1>Please Provide Valid Emails</h1>");
+                }
+            }
+
+            let mailData = {
+                to: emailList,
+                subject: `You're invited to a new Corkboard!`,
+                bodyText: 
+                `Welcome to Corkboard!
+                Your Board's name is: ${boardName}
+                Your access url is: ${aTag}
+                Message: ${emailMsg}
+                Please bookmark your board page and save this email for reference`,
+                htmlText: 
+                `<h1>Welcome to corkboard!</h1>
+                <h3>Your Board's name is: ${boardName}</h3>
+                Your Board URL is: <a href="${aTag}">${aTag}</a><br>
+                Message from Board Creator: ${emailMsg}<br>
+                Please bookmark your board page and save this email for reference`,
+            };
+            //mail(req.body.to, req.body.subject, req.body.bodyText, req.body.htmlText);
+            $.post("/api/mail", mailData, function(data2) {
+                $('#modalInvite').html(modalUrlMsg + "<p>Your invite message has been sent!</p>"
+                + "<p>Taking you to your board page in 5 seconds...</p>");
+                setTimeout(()=> location.href = aTag, 5000);
+            });
+
+        } else {
+            $('#modalInvite').html("<h1>Please Provide Valid Emails</h1>");
+        }
+        
+    })
+
+});
+</script>
 
 @endsection
