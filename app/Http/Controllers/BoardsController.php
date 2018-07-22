@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 use App\Board;
 use App\User;
  
@@ -12,8 +13,10 @@ class BoardsController extends Controller
  
     public function index()
     {
+        
     //Boards holds all the boards..here we are assigning Board to a variable
         $boards = Board::orderBy('created_at', 'desc')->paginate(5);
+        // dd(Auth::user());
     //Then we return this route to the view home.blade and pass the $boards variable
     //to the home view AS the name boards!
         return view('home')->with(['boards' => $boards]);
@@ -32,11 +35,17 @@ class BoardsController extends Controller
  
     public function store(Request $request)
     {
-        $board = Board::create($request->all());
-        // $board = new Board;
-        // $board->name = $request->input('name');
+        $this->validate($request,[
+            'name'=>'required',
+        ]);
+        // Board::create($request->all());
+        $board = new Board;
+        $board->name = $request->input('name');
+
+        
         // $board->user_id = auth()->user['id'];
-        // $board->save();
+        $board->user_id = $request->user()->id;
+        $board->save();
 
         return redirect('home');
         // return response()->json($board, 201);
