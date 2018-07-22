@@ -28,7 +28,7 @@
    
     @auth
     <section class="section section-dark">
-        <h2>Welcome back, {{ Auth::user()->name }} </h2>
+        <h2>Welcome back, {{ Auth::user()->name }}! </h2>
       <!-- Create New Board Code -->
           <div class="container">
             <div class="flex-row row justify-content-center">     
