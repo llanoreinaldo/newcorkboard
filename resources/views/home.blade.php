@@ -35,7 +35,7 @@
                         <a>{{ $board->name }}</a>
                     </td>
                     <td>
-                        {{ $board->user_id}}
+                    {{ Auth::user()->name }}
                     </td>
                     <td>
                         <a>{{ $board->updated_at->format('m-d-Y') }}</a>

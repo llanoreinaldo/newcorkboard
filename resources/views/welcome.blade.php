@@ -28,8 +28,7 @@
    
     @auth
     <section class="section section-dark">
-        <h2>Create Your Board</h2>
-
+        <h2>Welcome back, {{ Auth::user()->name }} </h2>
       <!-- Create New Board Code -->
           <div class="container">
             <div class="flex-row row justify-content-center">     
@@ -42,6 +41,13 @@
                   >
                     Create New Board
                   </button>
+                  <a href="/home">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                  >
+                    My Dashboard
+                  </button></a>
               </center>
             </div>
           </div>
