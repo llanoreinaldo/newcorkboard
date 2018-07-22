@@ -101,7 +101,8 @@ th {
 }
 
 .card-body {
-  height: 320px;
+  width: 100%;
+  height: auto;
   background: white;
   /* background: #6985b6; */
   /* opacity: .8; */

@@ -41,12 +41,10 @@ export default class CreateBoard extends Component {
                     type="submit"
                     className="btn btn-primary"
                     data-toggle="modal"
-                    id="createBoard"
+                    id="createBoardModal"
                   >
                     Create New Board
                   </button>
-                  {/* <div id="errorModal"></div>
-                  <div id="inviteModal"></div> */}
                 </a>
               </div>
             </div>
