@@ -30,7 +30,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+    <link href="{{ asset('css/board.css') }}" rel="stylesheet">
 </head>
 <style>
         body{background:url("https://img-aws.ehowcdn.com/default/cme/cme_public_images/www_ehow_com/i.ehow.com/images/a04/rl/93/corkboard-made-800x800.jpg")}
@@ -39,7 +39,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             
-                <a class="navbar-brand" style="color:white;">
+                <a class="navbar">
                 <a href="{{ url('/home') }}"><img id="logo" src="/assets/images/cork.png" alt="corkboard"></img> 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -50,19 +50,29 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                     <div class="container">
-                    <h1>{{$board->name}}</h1>
+                    <h1><strong>{{$board->name}}</strong></h1>
                     </div>
                     </ul>
                         <ul>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-2.5">
                             <li>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-tags"></i>TAGS</button> 
+                                <button type="button" class="btn btn-primary"><i class="fas fa-envelope-open"></i> Invite</button> 
                             </li>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-2.5">
                             <li>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-bookmark"></i>Add Bookmark</button> 
+                                <button type="button" class="btn btn-primary"><i class="fas fa-tags"></i> Add Tags</button> 
+                            </li>
+                        </div>
+                        <div class="col-lg-2.5">
+                            <li>
+                                <button type="button" class="btn btn-primary"><i class="fas fa-bookmark"></i> Add Bookmark</button> 
+                            </li>
+                        </div>
+                        <div class="col-lg-2.5">
+                            <li>
+                                <button type="button" class="btn btn-primary"><i class="fas fa-bullhorn"></i> Add Announcement</button> 
                             </li>
                         </div>
                     </div>
@@ -72,14 +82,14 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}" style="color:white;">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}" style="color:white;">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @else
-                            <li class="nav-item dropdown" style="color:white;">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;" v-pre>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
