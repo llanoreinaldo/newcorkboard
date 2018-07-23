@@ -232,6 +232,11 @@ h5 {
   max-width: 200px;
 }
 
+.section-dark {
+  background-color: rgb(0, 29, 68);
+  color: #ddd;
+}
+
 .topsec {
   background: #001945;
   color: white;

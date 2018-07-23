@@ -57,17 +57,27 @@
                     <div class="row">
                         <div class="col-lg-2.5">
                             <li>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-envelope-open"></i> Invite</button> 
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inviteModal"><i class="fas fa-envelope-open"></i> Invite</button> 
                             </li>
                         </div>
                         <div class="col-lg-2.5">
                             <li>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-tags"></i> Add Tags</button> 
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#topicModal"><i class="fas fa-tags"></i> Add Tag</button> 
                             </li>
                         </div>
                         <div class="col-lg-2.5">
                             <li>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-bookmark"></i> Add Bookmark</button> 
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTopicModal"><i class="fas fa-tags"></i> Edit Tag</button> 
+                            </li>
+                        </div>
+                        <div class="col-lg-2.5">
+                            <li>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#topicModal"><i class="fas fa-tags"></i> Apply Filter</button> 
+                            </li>
+                        </div>
+                        <div class="col-lg-2.5">
+                            <li>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target='#announcementModal'><i class="fas fa-bookmark"></i> Add Bookmark</button> 
                             </li>
                         </div>
                         <div class="col-lg-2.5">
@@ -113,9 +123,136 @@
                 </div>         
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+
+<!--Invite Modal -->
+<div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header section-dark">
+                <h4 class="modal-title" id="inviteModalLabel">
+                    <strong>Send Invites to Your Board</strong>
+                </h4>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <div class="form-group" id="inviteForm">
+                    <form action="/api/boards" method="POST">
+                        @csrf
+                        <label for='emails' class='col-form-label'>E-Mail(s):<label for="recipient-name" class="col-form-label text-muted">(Use a comma "," to send to multiple email addresses.)</label></label>
+                        <input type="email" class="form-control" id="inviteEmails" required="required" placeholder="name@example.com, name2@example.com"
+                            multiple>
+                        <hr>
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="inviteEmailMsg"></textarea>
+                        <br>
+                        <br>
+                        <center>
+                            <a href="#">
+                                <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+
+<!-- Add Tag Modal -->
+<div class="modal fade" id="topicModal" tabindex="-1" role="dialog" aria-labelledby="topicModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header section-dark">
+                <h4 class="modal-title" id="topicModalLabel"><strong>Add a New Tag</strong></h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" id="newBoardForm">
+                    <form action="/api/boards" method="POST">
+                        @csrf
+                        <input type="text" id="title" placeholder="Type Tag Name Here">
+                        <br>
+                        <br>
+                        <center>
+                            <a href="#">
+                                <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Tag Modal -->
+<div class="modal fade" id="editTopicModal" tabindex="-1" role="dialog" aria-labelledby="topicModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header section-dark">
+                <h4 class="modal-title" id="editTopicModalLabel">
+                    <strong>Edit A Tag</strong>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form action="/api/boards" method="POST">
+                    @csrf
+                    <input type="text" id="editTagModalName">
+                    <br>
+                    <br>
+                    <center>
+                        <a href="#">
+                            <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
+                        </a>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Apply Filters Modal -->
+
+<!-- Add Bookmark Modal -->
+
+<!-- Add Announcement Modal -->
+<div class="modal fade" id="announcementModal" tabindex="-1" role="dialog" aria-labelledby="announcementModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header section-dark">
+                <h4 class="modal-title" id="announcementModalLabel">Create a New Announcent</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" id="newBoardForm">
+                    <form action="/api/boards" method="POST">
+                        @csrf
+                        <textarea rows="4" cols="50" id="postMsg" placeholder="Message"></textarea>
+                        <br>
+                        <br>
+                        <input type="text" id="postAuthor" placeholder="Author">
+                        <br>
+                        <br>
+                        <center>
+                            <a href="#">
+                                <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <main class="py-4">
+        @yield('content')
+    </main>
+</div>
 </body>
 </html>

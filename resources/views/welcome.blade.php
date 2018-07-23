@@ -69,27 +69,32 @@
     <div id="contactUs"></div>
     <div id="homeLogoImg"></div>
     
-    <!-- Modal -->
+<!-- Modal -->
 <div class="modal fade" id="createBoardModal" tabindex="-1" role="dialog" aria-labelledby="createBoardModal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header section-dark">
-        <h5 class="modal-title" id="exampleModalLabel">New Board Form</h5>
-      </div>
-      <div class="modal-body">
-            <div class="form-group" id="newBoardForm">
-                <form action="/api/boards" method="POST">
-                @csrf
-                <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Enter your new board name here">
-                <center><strong id="helpId" class="form-text text-muted" style="font-size: 12px">Note: Your board's name must be a unique name.</strong></center>
-                <center>
-                    <a href="home"><button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button></a>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </center>  
-            </form>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header section-dark">
+                <h5 class="modal-title" id="exampleModalLabel">New Board Form</h5>
             </div>
-      </div>
-      
+            <div class="modal-body">
+                <div class="form-group" id="newBoardForm">
+                    <form action="/api/boards" method="POST">
+                        @csrf
+                        <input type="text" class="form-control" name="name" id="" aria-describedby="helpId" placeholder="Enter your new board name here">
+                        <center>
+                            <strong id="helpId" class="form-text text-muted" style="font-size: 12px">Note: Your board's name must be a unique name.</strong>
+                        </center>
+                        <center>
+                            <a href="home">
+                                <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
+                            </a>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
         <script src="{{mix('js/app.js')}}" ></script>

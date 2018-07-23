@@ -5,20 +5,19 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 <link href="{{ asset('css/board.css') }}" rel="stylesheet"> 
 <!-- Announcement Section    -->
-
-
-    <div class="card-header topsec1">
-        <center>
-            <h4 class='announcementtitle'><strong>Announcements</strong></h4>
-        </center>
-    </div>
-    <div class="annoucementCard-body">
-        <p class="card-text animation" style="padding-bottom:10px;">
-            {msg} by
-            <span id="author">{author}</span>
-        </p>
-    </div>
-
+<div class="card-header topsec1">
+    <center>
+        <h4 class='announcementtitle'>
+            <strong>Announcements</strong>
+        </h4>
+    </center>
+</div>
+<div class="annoucementCard-body">
+    <p class="card-text animation" style="padding-bottom:10px;">
+        {msg} by
+        <span id="author">{author}</span>
+    </p>
+</div>
 
 <!-- CARDS -->
 <div class="main col-11">
@@ -133,7 +132,6 @@
         </div>
     </div>
 </div>
-
 
     
 @endsection
