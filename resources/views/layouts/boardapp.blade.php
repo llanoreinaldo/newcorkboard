@@ -74,18 +74,18 @@
                         <div class="col-lg-2.5">
                             <li>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTopicModal">
-                                    <i class="fas fa-tags"></i> Edit Tag</button>
+                                <i class="fas fa-edit"></i> Edit Tag</button>
                             </li>
                         </div>
                         <div class="col-lg-2.5">
                             <li>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#topicModal">
-                                    <i class="fas fa-tags"></i> Apply Filter</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#filtersModal">
+                                <i class="fas fa-search"></i> Search Tags</button>
                             </li>
                         </div>
                         <div class="col-lg-2.5">
                             <li>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target='#announcementModal'>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target='#postModal'>
                                     <i class="fas fa-bookmark"></i> Add Bookmark</button>
                             </li>
                         </div>
@@ -117,7 +117,7 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                         document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
                             <a class="dropdown-item" href="/home">
@@ -184,7 +184,7 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group" id="newBoardForm">
+                    <div class="form-group" id="addTagForm">
                         <form action="/api/boards" method="POST">
                             @csrf
                             <input type="text" id="title" placeholder="Type Tag Name Here">
@@ -213,18 +213,33 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    <form action="/api/boards" method="POST">
-                        @csrf
-                        <input type="text" id="editTagModalName">
-                        <br>
-                        <br>
-                        <center>
-                            <a href="#">
-                                <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
-                            </a>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </center>
-                    </form>
+                    <div class="form-group" id="editTagForm">
+                        <form action="/api/boards" method="POST">
+                            @csrf
+                            <center class="postTags">
+                                <h4>Select Tag: </h4>
+                                <br>
+                                <div class="row filterButtons" style="padding-left: 20px">
+
+                                    <li style="list-style-type: none; padding-right: 20px; font-size: 15px;">
+                                        <label>
+                                            <input value="id" type="checkbox" class="checkboxBtn">{name}</label>
+                                    </li>
+
+                                </div>
+                            </center>
+                            <br>
+                            <br>
+                            <input type="text" id="editTagModalName">
+
+                            <center>
+                                <a href="#">
+                                    <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
+                                </a>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </center>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,9 +247,83 @@
 
 
     <!-- Apply Filters Modal -->
+    <div class="modal fade" id="filtersModal" tabindex="-1" role="dialog" aria-labelledby="filtersModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header section-dark">
+                    <h4 class="modal-title" id="filtersModalLabel">
+                        <strong>Apply Filters</strong>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group" id="newBoardForm">
+                        <form action="/api/boards" method="POST">
+                            @csrf
+                            <li style="list-style-type: none; padding-right: 20px; font-size: 20px;">
+                                <label>
+                                    <input value="id" type="checkbox" class="checkboxBtn">{name}</label>
+                            </li>
+                            <br>
+                            <br>
+                            <center>
+                                <a href="#">
+                                    <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
+                                </a>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Add Bookmark Modal -->
+    <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="postModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header section-dark">
+                    <h4 class="modal-title" id="postModalLabel">Add a New Bookmark</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group" id="newBoardForm">
+                        <form action="/api/boards" method="POST">
+                            <input type="text" id="postUrl" placeholder="URL">
+                            <br>
+                            <br>
+                            <input type="text" id="postTitle" placeholder="Title">
+                            <br>
+                            <br>
+                            <input type="text" id="postDescription" placeholder="Description">
+                            <br>
+                            <br>
+                            <input type="text" id="postImgUrl" placeholder="Image URL">
+                            <br>
+                            <br>
+                            <center class="postTags">
+                                <h4>Select Tags: </h4>
+                                <br>
+                                <div class="row filterButtons" style="padding-left: 20px">
 
+                                    <li style="list-style-type: none; padding-right: 20px; font-size: 15px;">
+                                        <label>
+                                            <input value="id" type="checkbox" class="checkboxBtn">{name}</label>
+                                    </li>
+
+                                </div>
+                            </center>
+                            <center>
+                                <a href="#">
+                                    <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
+                                </a>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Add Announcement Modal -->
 
@@ -245,7 +334,7 @@
                     <h4 class="modal-title" id="announcementModalLabel">Create a New Announcent</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group" id="newBoardForm">
+                    <div class="form-group" id="newAnnouncementForm">
                         <form action="/api/boards" method="POST">
                             @csrf
                             <label for='author' class='col-form-label'>Author</label>
@@ -268,7 +357,6 @@
             </div>
         </div>
     </div>
-
 
     <main class="py-4">
         @yield('content')
