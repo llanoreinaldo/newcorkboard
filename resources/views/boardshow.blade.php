@@ -8,7 +8,7 @@
 <div class="card-header topsec1">
     <center>
         <h4 class='announcementtitle'>
-            <strong>Announcements</strong>
+            <strong>ANNOUNCEMENTS</strong>
         </h4>
     </center>
 </div>
