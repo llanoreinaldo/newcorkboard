@@ -53,7 +53,20 @@
                     <h1>{{$board->name}}</h1>
                     </div>
                     </ul>
-
+                        <ul>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <li>
+                                <button type="button" class="btn btn-primary"><i class="fas fa-tags"></i>TAGS</button> 
+                            </li>
+                        </div>
+                        <div class="col-lg-6">
+                            <li>
+                                <button type="button" class="btn btn-primary"><i class="fas fa-bookmark"></i>Add Bookmark</button> 
+                            </li>
+                        </div>
+                    </div>
+                        </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -76,7 +89,7 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="home">
+                                    <a class="dropdown-item" href="/home">
                                         Dashboard
                                     </a>
 
