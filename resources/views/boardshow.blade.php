@@ -7,9 +7,9 @@
 <!-- Announcement Section    -->
 
 
-    <div class="card-header topsec">
+    <div class="card-header topsec1">
         <center>
-            <h4 class="card-title">Announcements</h4>
+            <h4 class='announcementtitle'><strong>Announcements</strong></h4>
         </center>
     </div>
     <div class="annoucementCard-body">

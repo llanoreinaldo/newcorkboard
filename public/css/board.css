@@ -210,7 +210,6 @@ body {
   /* background: #6985b6; */
   /* opacity: .8; */
   color: black;
-  
 }
 
 h5 {
@@ -222,6 +221,11 @@ h5 {
   font-size: 20px;
 }
 
+.announcementtitle {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
 .cardImg {
   margin-top: -40px;
   max-height: 200px;
@@ -230,6 +234,12 @@ h5 {
 
 .topsec {
   background: #001945;
+  color: white;
+  border-color: #001945
+}
+
+.topsec1 {
+  background: #6789c4;
   color: white;
   border-color: #001945
 }
