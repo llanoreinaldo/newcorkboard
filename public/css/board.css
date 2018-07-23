@@ -10,22 +10,51 @@ a:hover {
   color: rgb(0, 103, 155);
 }
 
+.animation {
+  position: relative;
+  animation: move 30s infinite;
+  animation-timing-function: ease;
+  -webkit-animation: move 30s infinite;
+  -webkit-animation-timing-function: ease;
+  animation-delay: 5s
+}
+
+@keyframes move {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100%
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100%
+  }
+}
+
 /*//////NAV/////*/
 
 .navbar {
   background: rgb(0, 29, 68);
   color: white;
   border-bottom: 1px solid #100f4e;
+  height: 86px;
 }
 
 .navbar-toggler collapsed {
   color: white;
 }
 
-.nav-item, .nav-link, .dropdown {
+.nav-item,
+.nav-link,
+.dropdown {
   color: white;
 }
-
 
 #filterDropdown {
   margin: 100px 0px 0px 50px;
@@ -136,7 +165,7 @@ body {
   /* Same as the width of the sidenav */
   font-size: 15px;
   /* Increased text to enable scrolling */
-  margin-top: 150px;
+  margin-top: -25px;
 }
 
 #boardName,
@@ -155,9 +184,9 @@ body {
 /*///////CARDS/////*/
 
 .card {
-  margin: 0px 0px 10px -50px;
+  margin: 0px -15px 10px -15px;
   /* background: rgb(169, 197, 211); */
-  margin-top:40px;
+  margin-top: 40px;
 }
 
 .card-body {
@@ -169,6 +198,11 @@ body {
   overflow: auto;
 }
 
+.card-title {
+  margin-top: 25px;
+  margin-bottom: -10px;
+}
+
 .annoucementCard-body {
   height: initial;
   background: white;
@@ -176,7 +210,7 @@ body {
   /* background: #6985b6; */
   /* opacity: .8; */
   color: black;
-  overflow: auto;
+  
 }
 
 h5 {
@@ -194,10 +228,18 @@ h5 {
   max-width: 200px;
 }
 
+.topsec {
+  background: #001945;
+  color: white;
+  border-color: #001945
+}
+
 .bottomsec {
   background: #001945;
   /* opacity: .9; */
+  margin: 0 -1px -1px -1px;
   margin-bottom: -1px;
+  width: 100.5%
 }
 
 #url {
@@ -244,11 +286,12 @@ h5 {
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 168px;
   width: 100%;
-  height: 100%;
+  height: 50%;
+  overflow: scroll;
 }
 
 #author {
@@ -367,7 +410,7 @@ h5 {
   }
   .main {
     font-size: 15px;
-    margin-top: 75px;
+    margin-top: -45px;
     margin-right: 0px;
   }
   .cardDescription {
@@ -464,7 +507,7 @@ h5 {
   }
   .main {
     font-size: 15px;
-    margin-top: 85px;
+    margin-top: -45px;
     margin-right: 0px;
   }
   .cardDescription {
@@ -509,7 +552,7 @@ h5 {
 
 @media only screen and (min-width: 575px) {
   .main {
-    margin-top: 90px;
+    margin-top: -45px;
   }
   .cardDescription {
     display: block;
@@ -601,7 +644,7 @@ h5 {
   }
   .main {
     font-size: 15px;
-    margin-top: 85px;
+    margin-top: -45px;
     margin-right: 0px;
   }
   .cardDescription {
@@ -695,7 +738,7 @@ h5 {
   }
   .main {
     font-size: 15px;
-    margin-top: 85px;
+    margin-top: -45px;
     margin-right: 400px;
   }
   .cardDescription {
@@ -788,7 +831,7 @@ h5 {
   }
   .main {
     font-size: 15px;
-    margin-top: 115px;
+    margin-top: -15px;
   }
   .cardImg {
     margin-left: 30%;

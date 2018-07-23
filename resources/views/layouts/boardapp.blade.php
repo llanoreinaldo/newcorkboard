@@ -72,7 +72,7 @@
                         </div>
                         <div class="col-lg-2.5">
                             <li>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-bullhorn"></i> Add Announcement</button> 
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#announcementModal"><i class="fas fa-bullhorn"></i> Add Announcement</button> 
                             </li>
                         </div>
                     </div>
@@ -82,10 +82,10 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" style="color:white" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" style="color:white" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @else
                             <li class="nav-item dropdown">
@@ -110,8 +110,7 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
-            
+                </div>         
         </nav>
 
         <main class="py-4">

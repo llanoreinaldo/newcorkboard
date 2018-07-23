@@ -73,7 +73,7 @@
 if (false) {
   module.exports = require('./cjs/react.production.min.js');
 } else {
-  module.exports = __webpack_require__(47);
+  module.exports = __webpack_require__(45);
 }
 
 
@@ -118,7 +118,7 @@ if (false) {
   checkDCE();
   module.exports = require('./cjs/react-dom.production.min.js');
 } else {
-  module.exports = __webpack_require__(49);
+  module.exports = __webpack_require__(47);
 }
 
 
@@ -14037,7 +14037,7 @@ module.exports = warning;
 var printWarning = function() {};
 
 if (true) {
-  var ReactPropTypesSecret = __webpack_require__(48);
+  var ReactPropTypesSecret = __webpack_require__(46);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -14123,7 +14123,7 @@ module.exports = checkPropTypes;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(19);
-module.exports = __webpack_require__(73);
+module.exports = __webpack_require__(71);
 
 
 /***/ }),
@@ -14132,20 +14132,20 @@ module.exports = __webpack_require__(73);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Home_HomeLogo__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Home_GetOrganizedImg__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Home_CollaborateImg__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Home_LoginRegister__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Home_CreateBoard__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Home_OurPurpose__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Home_ContactUs__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Auth_RegisterModal__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Auth_LoginModal__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Board_Filters__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Board_Navbar__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Board_Cards__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Announcements__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_BoardModals__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Home_HomeLogo__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Home_GetOrganizedImg__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Home_CollaborateImg__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Home_LoginRegister__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Home_CreateBoard__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_Home_OurPurpose__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Home_ContactUs__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Auth_RegisterModal__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Auth_LoginModal__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Board_Filters__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_Board_Navbar__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Board_Cards__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Board_Announcements__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Board_BoardModals__ = __webpack_require__(70);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -14153,8 +14153,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 
 __webpack_require__(20);
-__webpack_require__(44);
-__webpack_require__(45);
+__webpack_require__(76);
+__webpack_require__(77);
 
 /**
  * Next, we will create a fresh React component instance and attach it to
@@ -36416,367 +36416,6 @@ module.exports = function spread(callback) {
 
 /***/ }),
 /* 44 */
-/***/ (function(module, exports) {
-
-$('document').ready(function () {
-    // console.log('ready')
-    var urlField = void 0;
-    //filter buttons
-    $('#filter, .filterBtn').click(function () {
-        $('.filterCard').toggle('blind');
-        $('#close').show();
-        $('#filter').hide();
-        $('#dropAnnounce').hide('blind');
-    });
-
-    //show/hide announcements
-    $('#announce').click(function () {
-        $('#dropAnnounce').show('blind');
-        $('.onPlusClose').show();
-        $('#closeAnn').toggle();
-        $('#announce, #close, .filterCard').hide();
-        // $('#filter').show();
-    });
-
-    $('#closeAnn').click(function () {
-        $('#dropAnnounce').hide('blind');
-        $('#announce').show();
-        $('#closeAnn').hide();
-    });
-
-    //Small menu button
-    $('.smallMenu').click(function () {
-        $('#dropAnnounce, .filterCard, #closeAnn').hide();
-        $('#announce').show();
-    });
-
-    //Small add button
-    $('.smallAdd').click(function () {
-        $('#closeAnn, #close, #dropAnnounce, .onPlusClose').hide();
-        $('#announce').show();
-    });
-    //X for close
-    $('#close').click(function () {
-        $('.filterCard').hide('blind');
-        $('#filter').show();
-        $('#close').hide();
-    });
-
-    //close filter when clicking topMenu buttons
-    $('.newLink, .newLink2').click(function () {
-        $('.filterCard').hide('blind');
-        $('#filter').show();
-        $('#close').hide();
-    });
-
-    $('.newLink2').click(function () {
-        $('#filter').hide();
-    });
-    //delete link
-    $('.cardDelete').click(function (event) {
-        var linkId = $(event.target).attr("data-linkId");
-        var boardId = $('#boardName').attr("data-boardId");
-        $.ajax({
-            method: "DELETE",
-            url: '/api/boards/' + boardId + '/links/' + linkId,
-            success: function success(results) {
-                location.reload();
-            }
-        });
-    });
-
-    //topic submit function
-    $('.link').click(function (e) {
-        e.preventDefault();
-        var id = $('#boardName').attr("data-boardId");
-        var field = $('#title').val().trim();
-        // console.log(field);
-        var data = {
-            name: field
-        };
-        $.post('/api/boards/' + id + '/tags/new', data, function (data) {
-            console.log(data);
-            location.reload();
-        });
-    });
-
-    //post submit function
-    $('.postButton').click(function (e) {
-        var id = $('#boardName').attr("data-boardId");
-        e.preventDefault();
-        var newTitle = $('#postTitle').val().trim();
-        var newUrl = $('#postUrl').val().trim();
-        var newDescription = $('#postDescription').val().trim();
-        var newImageUrl = $('#postImgUrl').val().trim();
-
-        var data = {
-            title: newTitle,
-            description: newDescription,
-            url: newUrl,
-            image_url: newImageUrl
-        };
-        var tags = [];
-        //loop through checkboxes and push checked box values to array
-        $('.postTags').find('input').each(function (index, element) {
-            if ($(element).is(":checked")) {
-                tags.push($(element).val());
-            }
-        });
-
-        data.tags = tags;
-
-        $.post('/api/boards/' + id + '/links/new', data, function (data) {
-            console.log(data);
-            location.reload();
-        });
-    });
-
-    //submit edit card data to DB
-    $('.editButton').click(function (e) {
-        var boardId = $('#boardName').attr("data-boardId");
-        var linkId = $(e.target).attr('data-linkid');
-        var data = {
-            title: $('#editTitle').val().trim(),
-            url: $('#editUrl').val().trim(),
-            description: $('#editDescription').val().trim(),
-            image_url: $('#editImgUrl').val().trim()
-        };
-
-        var tags = [];
-        //loop through checkboxes and push checked box values to array
-        $('.editTags').find('input').each(function (index, element) {
-            if ($(element).is(":checked")) {
-                tags.push($(element).val());
-            }
-        });
-        if (tags.length > 0) {
-            data.tags = tags;
-        } else {
-            data.tags = null;
-        }
-
-        //console.log(linkId, data);
-        $.ajax({
-            method: "PUT",
-            url: '/api/boards/' + boardId + '/links/' + linkId,
-            data: data,
-            success: function success(results) {
-                location.reload();
-            }
-        });
-    });
-
-    //populates edit modal with data
-    $('.cardEdit').click(function (e) {
-        //grab card data
-        var linkId = $(e.target).attr("data-linkid").trim();
-        var title = $('#cardTitleLinkNum' + linkId).text().trim();
-        var url = $('#cardUrlLinkNum' + linkId).text().trim();
-        var desc = $('#cardDescLinkNum' + linkId).text().trim();
-        var imgUrl = $('#cardImgLinkNum' + linkId).attr("src");
-        if (imgUrl) {
-            imgUrl = imgUrl.trim();
-        }
-
-        var currentTags = [];
-        //grab current tags off of card
-        $('.tags' + linkId).find('a').each(function (index, element) {
-            currentTags.push($(element).attr("data-tagid"));
-        });
-
-        //loop through checkboxes and check those that are currently tags of card
-        $('.editTags').find('input').each(function (index, element) {
-            if (currentTags.indexOf($(element).val()) > -1) {
-                $(element).prop("checked", true);
-            } else {
-                $(element).prop("checked", false);
-            }
-        });
-
-        //populate edit modal fields with current card data
-        $('#editTitle').val(title);
-        $('#editUrl').val(url);
-        $('#editDescription').val(desc);
-        $('#editImgUrl').val(imgUrl);
-        $('.editButton').attr("data-linkid", linkId);
-    });
-
-    //add a announcement
-    $('.announcementButton').click(function (e) {
-        var id = $('#boardName').attr("data-boardId");
-        e.preventDefault();
-        var newMsg = $('#postMsg').val().trim();
-        var newAuthor = $('#postAuthor').val().trim();
-        console.log(newMsg);
-        var data = {
-            msg: newMsg,
-            author: newAuthor
-        };
-        $.post('/api/boards/' + id + '/msgs/new', data, function (data) {
-            console.log(data);
-            location.reload();
-        });
-    });
-
-    //edit message
-    $('.editSubmit').click(function (e) {
-        var id = $('#boardName').attr("data-boardId");
-        var msgId = $('.cardDescription').attr('data-descId');
-        e.preventDefault();
-        var updateMsg = $('#putMsg').val().trim();
-        //var updateAuthor = $('#putAuthor').val().trim();
-
-        var data = {
-            msg: updateMsg
-            //author: updateAuthor
-        };
-        $.put('/api/boards/' + id + '/msgs/' + id.description, data, function (data) {
-            console.log(data);
-            location.reload();
-        });
-    });
-
-    //this fx scrapes meta data when url info is entered into the add bookmark url field
-    $('#postUrl').change(function (event) {
-        var urlInput = event.target.value;
-        if (!urlInput.startsWith('http')) {
-            urlInput = 'http://' + urlInput;
-            //$('#postUrl').val(urlInput);
-        }
-        if (urlInput !== urlField) {
-            urlField = urlInput;
-            // console.log(urlField);
-            $.post('/api/scrape', {
-                url: urlField
-            }, function (data) {
-                // console.log(data);
-                $('#postTitle').val(data.title);
-                $('#postDescription').val(data.description);
-                $('#postUrl').val(data.url);
-                $('#postImgUrl').val(data.image);
-            });
-        }
-    });
-
-    //this function searches by multiple tags
-    $('#tagSearch').click(function () {
-        var boardId = $('#boardName').attr("data-boardId");
-        var checkedTags = [];
-        $('.filterButtons').find('input').each(function (index, element) {
-            if ($(element).is(':checked')) {
-                var tagId = $(element).val();
-                checkedTags.push(tagId);
-            }
-        });
-        var data = {
-            tags: checkedTags
-        };
-        $.post('/boards/' + boardId + '/tags', data, function (results) {
-            //console.log(results);
-            if ($.isEmptyObject(results)) {
-                $("#editTopicModalLabel").text("Please Select Tags to include in Search");
-                $("#editTagSubmit").hide();
-                $("#editTagModalName").hide();
-                $('#editTopicModal').modal();
-            } else {
-                $('body').html(results);
-            }
-        });
-    });
-
-    $('#tagDelete').click(function () {
-        var boardId = $('#boardName').attr("data-boardId");
-        var checkedTags = [];
-        var tagId = void 0;
-        $('.filterButtons').find('input').each(function (index, element) {
-            if ($(element).is(':checked')) {
-                tagId = $(element).val();
-                checkedTags.push(tagId);
-            }
-        });
-        if (checkedTags.length === 1) {
-            $.ajax({
-                method: "DELETE",
-                url: '/api/boards/' + boardId + '/tags/' + tagId,
-                success: function success(results) {
-                    location.reload();
-                }
-            });
-        } else {
-            $("#editTopicModalLabel").text("Please Select One Tag to Delete");
-            $("#editTagSubmit").hide();
-            $("#editTagModalName").hide();
-            $('#editTopicModal').modal();
-        }
-    });
-
-    //populate and validate edit tag modal
-    $('#tagEdit').click(function () {
-        var checkedTags = 0;
-        var tagName = void 0;
-        var tagId = void 0;
-        $('.filterButtons').find('input').each(function (index, element) {
-            if ($(element).is(':checked')) {
-                tagName = $(element).closest('label').text();
-                tagId = $(element).val();
-                checkedTags++;
-            }
-        });
-        if (checkedTags !== 1) {
-            $("#editTopicModalLabel").text("Please Select One Tag to Edit");
-            $("#editTagSubmit").hide();
-            $("#editTagModalName").hide();
-            $('#editTopicModal').modal();
-        } else {
-            $("#editTopicModalLabel").text("Edit Tag Name:");
-            $("#editTagSubmit").attr("data-tagId", tagId).show();
-            $("#editTagModalName").val(tagName.trim()).show();
-            $('#editTopicModal').modal();
-        }
-    });
-
-    //send tag edit to server
-    $("#editTagSubmit").click(function (e) {
-        var boardId = $('#boardName').attr("data-boardId");
-        var tagId = $(e.target).attr("data-tagId");
-        var newTagName = $("#editTagModalName").val();
-        var data = {
-            name: newTagName
-        };
-        $.ajax({
-            method: "PUT",
-            url: '/api/boards/' + boardId + '/tags/' + tagId,
-            data: data,
-            success: function success(results) {
-                location.reload();
-            }
-        });
-    });
-}); //end document.ready
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports) {
-
-
-$('newboard').click(function () {
-    $('#createBoardModal').show();
-    $('#boardCancel').show();
-});
-
-$('#boardSubmit').click(function () {
-    $('#newboard').show();
-});
-
-$('#boardCancel').click(function () {
-    $('#newBoardForm').hide();
-    $('#boardList').show();
-    $('#newboard').show();
-    $('#boardCancel').hide();
-});
-
-/***/ }),
-/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36830,7 +36469,7 @@ if (document.getElementById('homeLogoImg')) {
 }
 
 /***/ }),
-/* 47 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38323,7 +37962,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 48 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38342,7 +37981,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 49 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38366,16 +38005,16 @@ if (true) {
 var invariant = __webpack_require__(14);
 var React = __webpack_require__(0);
 var warning = __webpack_require__(16);
-var ExecutionEnvironment = __webpack_require__(50);
+var ExecutionEnvironment = __webpack_require__(48);
 var _assign = __webpack_require__(13);
 var emptyFunction = __webpack_require__(4);
 var checkPropTypes = __webpack_require__(17);
-var getActiveElement = __webpack_require__(51);
-var shallowEqual = __webpack_require__(52);
-var containsNode = __webpack_require__(53);
+var getActiveElement = __webpack_require__(49);
+var shallowEqual = __webpack_require__(50);
+var containsNode = __webpack_require__(51);
 var emptyObject = __webpack_require__(15);
-var hyphenateStyleName = __webpack_require__(56);
-var camelizeStyleName = __webpack_require__(58);
+var hyphenateStyleName = __webpack_require__(54);
+var camelizeStyleName = __webpack_require__(56);
 
 // Relying on the `invariant()` implementation lets us
 // have preserve the format and params in the www builds.
@@ -55779,7 +55418,7 @@ module.exports = reactDom;
 
 
 /***/ }),
-/* 50 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55818,7 +55457,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 51 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55860,7 +55499,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 52 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55931,7 +55570,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 53 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55946,7 +55585,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(54);
+var isTextNode = __webpack_require__(52);
 
 /*eslint-disable no-bitwise */
 
@@ -55974,7 +55613,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 54 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55989,7 +55628,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(55);
+var isNode = __webpack_require__(53);
 
 /**
  * @param {*} object The object to check.
@@ -56002,7 +55641,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 55 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56030,7 +55669,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 56 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56045,7 +55684,7 @@ module.exports = isNode;
 
 
 
-var hyphenate = __webpack_require__(57);
+var hyphenate = __webpack_require__(55);
 
 var msPattern = /^ms-/;
 
@@ -56072,7 +55711,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 57 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56108,7 +55747,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 58 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56123,7 +55762,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(59);
+var camelize = __webpack_require__(57);
 
 var msPattern = /^-ms-/;
 
@@ -56151,7 +55790,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 59 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56186,7 +55825,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 60 */
+/* 58 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56244,7 +55883,7 @@ if (document.getElementById('getOrganizedImg')) {
 }
 
 /***/ }),
-/* 61 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56302,7 +55941,7 @@ if (document.getElementById('collaborateImg')) {
 }
 
 /***/ }),
-/* 62 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56403,7 +56042,7 @@ if (document.getElementById("loginRegister")) {
 }
 
 /***/ }),
-/* 63 */
+/* 61 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56500,7 +56139,7 @@ if (document.getElementById("createBoard")) {
 }
 
 /***/ }),
-/* 64 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56564,7 +56203,7 @@ if (document.getElementById('ourPurpose')) {
 }
 
 /***/ }),
-/* 65 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56644,7 +56283,7 @@ if (document.getElementById('contactUs')) {
 }
 
 /***/ }),
-/* 66 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56754,7 +56393,7 @@ if (document.getElementById('#register')) {
 }
 
 /***/ }),
-/* 67 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56848,7 +56487,7 @@ if (document.getElementById('#login')) {
 }
 
 /***/ }),
-/* 68 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56985,7 +56624,7 @@ if (document.getElementById('filters')) {
 }
 
 /***/ }),
-/* 69 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57185,7 +56824,7 @@ if (document.getElementById('navbar')) {
 }
 
 /***/ }),
-/* 70 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57342,7 +56981,7 @@ if (document.getElementById('cards')) {
 }
 
 /***/ }),
-/* 71 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57452,7 +57091,7 @@ if (document.getElementById('announcements')) {
 }
 
 /***/ }),
-/* 72 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57816,10 +57455,375 @@ if (document.getElementById('boardModals')) {
 }
 
 /***/ }),
-/* 73 */
+/* 71 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */
+/***/ (function(module, exports) {
+
+$('document').ready(function () {
+    // console.log('ready')
+    var urlField = void 0;
+    //filter buttons
+    $('#filter, .filterBtn').click(function () {
+        $('.filterCard').toggle('blind');
+        $('#close').show();
+        $('#filter').hide();
+        $('#dropAnnounce').hide('blind');
+    });
+
+    //show/hide announcements
+    $('#announce').click(function () {
+        $('#dropAnnounce').show('blind');
+        $('.onPlusClose').show();
+        $('#closeAnn').toggle();
+        $('#announce, #close, .filterCard').hide();
+        // $('#filter').show();
+    });
+
+    $('#closeAnn').click(function () {
+        $('#dropAnnounce').hide('blind');
+        $('#announce').show();
+        $('#closeAnn').hide();
+    });
+
+    //Small menu button
+    $('.smallMenu').click(function () {
+        $('#dropAnnounce, .filterCard, #closeAnn').hide();
+        $('#announce').show();
+    });
+
+    //Small add button
+    $('.smallAdd').click(function () {
+        $('#closeAnn, #close, #dropAnnounce, .onPlusClose').hide();
+        $('#announce').show();
+    });
+    //X for close
+    $('#close').click(function () {
+        $('.filterCard').hide('blind');
+        $('#filter').show();
+        $('#close').hide();
+    });
+
+    //close filter when clicking topMenu buttons
+    $('.newLink, .newLink2').click(function () {
+        $('.filterCard').hide('blind');
+        $('#filter').show();
+        $('#close').hide();
+    });
+
+    $('.newLink2').click(function () {
+        $('#filter').hide();
+    });
+    //delete link
+    $('.cardDelete').click(function (event) {
+        var linkId = $(event.target).attr("data-linkId");
+        var boardId = $('#boardName').attr("data-boardId");
+        $.ajax({
+            method: "DELETE",
+            url: '/api/boards/' + boardId + '/links/' + linkId,
+            success: function success(results) {
+                location.reload();
+            }
+        });
+    });
+
+    //topic submit function
+    $('.link').click(function (e) {
+        e.preventDefault();
+        var id = $('#boardName').attr("data-boardId");
+        var field = $('#title').val().trim();
+        // console.log(field);
+        var data = {
+            name: field
+        };
+        $.post('/api/boards/' + id + '/tags/new', data, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+    //post submit function
+    $('.postButton').click(function (e) {
+        var id = $('#boardName').attr("data-boardId");
+        e.preventDefault();
+        var newTitle = $('#postTitle').val().trim();
+        var newUrl = $('#postUrl').val().trim();
+        var newDescription = $('#postDescription').val().trim();
+        var newImageUrl = $('#postImgUrl').val().trim();
+
+        var data = {
+            title: newTitle,
+            description: newDescription,
+            url: newUrl,
+            image_url: newImageUrl
+        };
+        var tags = [];
+        //loop through checkboxes and push checked box values to array
+        $('.postTags').find('input').each(function (index, element) {
+            if ($(element).is(":checked")) {
+                tags.push($(element).val());
+            }
+        });
+
+        data.tags = tags;
+
+        $.post('/api/boards/' + id + '/links/new', data, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+    //submit edit card data to DB
+    $('.editButton').click(function (e) {
+        var boardId = $('#boardName').attr("data-boardId");
+        var linkId = $(e.target).attr('data-linkid');
+        var data = {
+            title: $('#editTitle').val().trim(),
+            url: $('#editUrl').val().trim(),
+            description: $('#editDescription').val().trim(),
+            image_url: $('#editImgUrl').val().trim()
+        };
+
+        var tags = [];
+        //loop through checkboxes and push checked box values to array
+        $('.editTags').find('input').each(function (index, element) {
+            if ($(element).is(":checked")) {
+                tags.push($(element).val());
+            }
+        });
+        if (tags.length > 0) {
+            data.tags = tags;
+        } else {
+            data.tags = null;
+        }
+
+        //console.log(linkId, data);
+        $.ajax({
+            method: "PUT",
+            url: '/api/boards/' + boardId + '/links/' + linkId,
+            data: data,
+            success: function success(results) {
+                location.reload();
+            }
+        });
+    });
+
+    //populates edit modal with data
+    $('.cardEdit').click(function (e) {
+        //grab card data
+        var linkId = $(e.target).attr("data-linkid").trim();
+        var title = $('#cardTitleLinkNum' + linkId).text().trim();
+        var url = $('#cardUrlLinkNum' + linkId).text().trim();
+        var desc = $('#cardDescLinkNum' + linkId).text().trim();
+        var imgUrl = $('#cardImgLinkNum' + linkId).attr("src");
+        if (imgUrl) {
+            imgUrl = imgUrl.trim();
+        }
+
+        var currentTags = [];
+        //grab current tags off of card
+        $('.tags' + linkId).find('a').each(function (index, element) {
+            currentTags.push($(element).attr("data-tagid"));
+        });
+
+        //loop through checkboxes and check those that are currently tags of card
+        $('.editTags').find('input').each(function (index, element) {
+            if (currentTags.indexOf($(element).val()) > -1) {
+                $(element).prop("checked", true);
+            } else {
+                $(element).prop("checked", false);
+            }
+        });
+
+        //populate edit modal fields with current card data
+        $('#editTitle').val(title);
+        $('#editUrl').val(url);
+        $('#editDescription').val(desc);
+        $('#editImgUrl').val(imgUrl);
+        $('.editButton').attr("data-linkid", linkId);
+    });
+
+    //add a announcement
+    $('.announcementButton').click(function (e) {
+        var id = $('#boardName').attr("data-boardId");
+        e.preventDefault();
+        var newMsg = $('#postMsg').val().trim();
+        var newAuthor = $('#postAuthor').val().trim();
+        console.log(newMsg);
+        var data = {
+            msg: newMsg,
+            author: newAuthor
+        };
+        $.post('/api/boards/' + id + '/msgs/new', data, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+    //edit message
+    $('.editSubmit').click(function (e) {
+        var id = $('#boardName').attr("data-boardId");
+        var msgId = $('.cardDescription').attr('data-descId');
+        e.preventDefault();
+        var updateMsg = $('#putMsg').val().trim();
+        //var updateAuthor = $('#putAuthor').val().trim();
+
+        var data = {
+            msg: updateMsg
+            //author: updateAuthor
+        };
+        $.put('/api/boards/' + id + '/msgs/' + id.description, data, function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+    //this fx scrapes meta data when url info is entered into the add bookmark url field
+    $('#postUrl').change(function (event) {
+        var urlInput = event.target.value;
+        if (!urlInput.startsWith('http')) {
+            urlInput = 'http://' + urlInput;
+            //$('#postUrl').val(urlInput);
+        }
+        if (urlInput !== urlField) {
+            urlField = urlInput;
+            // console.log(urlField);
+            $.post('/api/scrape', {
+                url: urlField
+            }, function (data) {
+                // console.log(data);
+                $('#postTitle').val(data.title);
+                $('#postDescription').val(data.description);
+                $('#postUrl').val(data.url);
+                $('#postImgUrl').val(data.image);
+            });
+        }
+    });
+
+    //this function searches by multiple tags
+    $('#tagSearch').click(function () {
+        var boardId = $('#boardName').attr("data-boardId");
+        var checkedTags = [];
+        $('.filterButtons').find('input').each(function (index, element) {
+            if ($(element).is(':checked')) {
+                var tagId = $(element).val();
+                checkedTags.push(tagId);
+            }
+        });
+        var data = {
+            tags: checkedTags
+        };
+        $.post('/boards/' + boardId + '/tags', data, function (results) {
+            //console.log(results);
+            if ($.isEmptyObject(results)) {
+                $("#editTopicModalLabel").text("Please Select Tags to include in Search");
+                $("#editTagSubmit").hide();
+                $("#editTagModalName").hide();
+                $('#editTopicModal').modal();
+            } else {
+                $('body').html(results);
+            }
+        });
+    });
+
+    $('#tagDelete').click(function () {
+        var boardId = $('#boardName').attr("data-boardId");
+        var checkedTags = [];
+        var tagId = void 0;
+        $('.filterButtons').find('input').each(function (index, element) {
+            if ($(element).is(':checked')) {
+                tagId = $(element).val();
+                checkedTags.push(tagId);
+            }
+        });
+        if (checkedTags.length === 1) {
+            $.ajax({
+                method: "DELETE",
+                url: '/api/boards/' + boardId + '/tags/' + tagId,
+                success: function success(results) {
+                    location.reload();
+                }
+            });
+        } else {
+            $("#editTopicModalLabel").text("Please Select One Tag to Delete");
+            $("#editTagSubmit").hide();
+            $("#editTagModalName").hide();
+            $('#editTopicModal').modal();
+        }
+    });
+
+    //populate and validate edit tag modal
+    $('#tagEdit').click(function () {
+        var checkedTags = 0;
+        var tagName = void 0;
+        var tagId = void 0;
+        $('.filterButtons').find('input').each(function (index, element) {
+            if ($(element).is(':checked')) {
+                tagName = $(element).closest('label').text();
+                tagId = $(element).val();
+                checkedTags++;
+            }
+        });
+        if (checkedTags !== 1) {
+            $("#editTopicModalLabel").text("Please Select One Tag to Edit");
+            $("#editTagSubmit").hide();
+            $("#editTagModalName").hide();
+            $('#editTopicModal').modal();
+        } else {
+            $("#editTopicModalLabel").text("Edit Tag Name:");
+            $("#editTagSubmit").attr("data-tagId", tagId).show();
+            $("#editTagModalName").val(tagName.trim()).show();
+            $('#editTopicModal').modal();
+        }
+    });
+
+    //send tag edit to server
+    $("#editTagSubmit").click(function (e) {
+        var boardId = $('#boardName').attr("data-boardId");
+        var tagId = $(e.target).attr("data-tagId");
+        var newTagName = $("#editTagModalName").val();
+        var data = {
+            name: newTagName
+        };
+        $.ajax({
+            method: "PUT",
+            url: '/api/boards/' + boardId + '/tags/' + tagId,
+            data: data,
+            success: function success(results) {
+                location.reload();
+            }
+        });
+    });
+}); //end document.ready
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports) {
+
+
+$('newboard').click(function () {
+    $('#createBoardModal').show();
+    $('#boardCancel').show();
+});
+
+$('#boardSubmit').click(function () {
+    $('#newboard').show();
+});
+
+$('#boardCancel').click(function () {
+    $('#newBoardForm').hide();
+    $('#boardList').show();
+    $('#newboard').show();
+    $('#boardCancel').hide();
+});
 
 /***/ })
 /******/ ]);
