@@ -3,26 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
 use App\Message;
+use App\Board;
+use App\User;
 
 class MessagesController extends Controller
 {
     //
     public function index()
     {
-        return Message::all();
+        $messages = Message::orderBy('created_at','desc');
+        dd($messages);
+
+        return view('boardshow')->with(['messages' => $messages]);
     }
  
     public function show(Message $message)
     {
-        return $message;
+        
+        return view('boardshow')->with('message', $message);
     }
  
     public function store(Request $request)
     {
         $message = Message::create($request->all());
  
-        return response()->json($message, 201);
+        return redirect()->back();
     }
  
     public function update(Request $request, Message $message)

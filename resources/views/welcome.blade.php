@@ -41,7 +41,7 @@
                   >
                     Create New Board
                   </button>
-                  <a href="/home">
+                  <a href="boards">
                   <button
                     type="submit"
                     class="btn btn-primary"
@@ -85,7 +85,7 @@
                             <strong id="helpId" class="form-text text-muted" style="font-size: 12px">Note: Your board's name must be a unique name.</strong>
                         </center>
                         <center>
-                            <a href="home">
+                            <a href="board">
                                 <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
                             </a>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
