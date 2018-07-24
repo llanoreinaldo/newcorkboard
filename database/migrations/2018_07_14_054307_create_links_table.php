@@ -19,6 +19,7 @@ class CreateLinksTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('image_url')->nullable();
+            $table->string('user_id');
             $table->timestamps();
             
         });
