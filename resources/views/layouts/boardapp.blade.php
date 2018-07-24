@@ -112,7 +112,7 @@
                                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            <a class="dropdown-item" href="/board">
+                            <a class="dropdown-item" href="/boards">
                                 Dashboard
                             </a>
 
@@ -126,7 +126,6 @@
             </div>
         </a>
     </nav>
-
 
     <!--Invite Modal -->
     <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteModal" aria-hidden="true">
