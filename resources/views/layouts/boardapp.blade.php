@@ -317,6 +317,8 @@
 
                             <label for='msg' class='col-form-label'>Message</label>
                             <textarea class="form-control" id="postMsg" placeholder="Message" name="msg"></textarea>
+                            <label for='msg' class='col-form-label'>Author</label>
+                            <p class="form-control" id="postAuthor" name="author">{{ Auth::user()->name }}</p>
                             <br>
                             <br>
                             <center>

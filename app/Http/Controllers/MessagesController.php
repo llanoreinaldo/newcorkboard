@@ -30,6 +30,10 @@ class MessagesController extends Controller
     {
         $message = Message::create($request->all());
  
+        // $message->user_id = auth()->user['id'];
+        $message->user_id = $request->user()->id;
+        $message->save();
+
         return redirect()->back();
     }
  
