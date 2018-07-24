@@ -66,13 +66,13 @@
                         <div class="col-lg-2.5">
                             <li>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editTopicModal">
-                                <i class="fas fa-edit"></i> Edit Tag</button>
+                                    <i class="fas fa-edit"></i> Edit Tag</button>
                             </li>
                         </div>
                         <div class="col-lg-2.5">
                             <li>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#filtersModal">
-                                <i class="fas fa-search"></i> Search Tags</button>
+                                    <i class="fas fa-search"></i> Search Tags</button>
                             </li>
                         </div>
                         <div class="col-lg-2.5">
@@ -109,7 +109,7 @@
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                                                             document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
                             <a class="dropdown-item" href="/board">
@@ -149,22 +149,22 @@
                                 multiple>
                             <hr>
                             <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control" id="inviteEmailMsg"></textarea>
-                            <br>
-                            <br>
-                            <center>
-                                <a href="#">
-                                    <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
-                                </a>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </center>
+                            <textarea class="form-control" id="inviteEmailMsg">Join my {{$board->name}} board at http://newcorkboard.com/boards/{{$board->hash}}</textarea>
                         </form>
+                        <div class="modal-footer">
+                            <!-- Close Button on Modal -->
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <!-- <span aria-hidden="true">&times;</span> -->
+                            </button>
+                            <!-- Send Message Button on Modal -->
+                            <button type="button" class="btn btn-secondary" id="closeBtn" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="sendInvites">Send Invite</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Add Tag Modal -->
     <div class="modal fade" id="topicModal" tabindex="-1" role="dialog" aria-labelledby="topicModalLabel" aria-hidden="true">
@@ -236,7 +236,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Apply Filters Modal -->
     <div class="modal fade" id="filtersModal" tabindex="-1" role="dialog" aria-labelledby="filtersModalLabel" aria-hidden="true">
@@ -316,7 +315,7 @@
                     <div class="form-group" id="newAnnouncementForm">
                         <form action="/messages" method="POST">
                             @csrf
-                            
+
                             <label for='msg' class='col-form-label'>Message</label>
                             <textarea class="form-control" id="postMsg" placeholder="Message" name="msg"></textarea>
                             <br>
