@@ -1,9 +1,6 @@
 @extends('layouts.boardapp')
 
 @section('content')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-<link href="{{ asset('css/board.css') }}" rel="stylesheet"> 
 <!-- Announcement Section    -->
 <div class="card-header topsec1">
     <center>
@@ -14,18 +11,18 @@
 </div>
 <div class="annoucementCard-body">
     <p class="card-text animation" style="padding-bottom:10px;">
-        {msg} by
+     by
         <span id="author">{author}</span>
     </p>
 </div>
 
 <!-- CARDS -->
-<div class="main col-11">
+<div class="main col-11"> 
     <div class='row'>
         <div class='offset-1 col-3'>
             <div class='card'>
                 <div class='card-header topsec'>
-                        <h5 id="cardTitleLinkNum  id" class="col-lg-8 col-md-8 col-sm-8 card-title">Title</h5>
+                        <h5 id="cardTitleLinkNum  id" class="col-lg-8 col-md-8 col-sm-8 card-title">title</h5>
                     <div class="card-body">
                         <div class='row'>
                             <div class="col-lg-8 col-md-6 col-sm-6">

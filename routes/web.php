@@ -27,32 +27,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
-// Route::get("/boards", function() {
-//     $boards = DB::table('boards')->get();
-//     return $boards;
-// });
-
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::get('/home', 'BoardsController@index')->name('boards');
-// Route::get('/home/{board}', 'BoardsController@show');
-
-Route::resource('home', 'BoardsController');
+Route::resource('messages', 'MessagesController');
 
 
     //Board Routes
-    Route::get('boards', 'BoardsController@index');
+Route::get('boards', 'BoardsController@index');
+Route::get('boards/{board}', 'BoardsController@show');
+Route::post('boards','BoardsController@store');
+Route::put(' boards/{boards}','BoardsController@update');
+Route::delete('boards/{boards}', 'BoardsController@delete');
 
-    Route::get('boards/{board}', 'BoardsController@show');
-        
-    Route::post('/api/boards','BoardsController@store');
-        
-    Route::put('board/{board}','BoardsController@update');
-        
-    Route::delete('board/{board}', 'BoardsController@delete');
-    
         //Link Routes
     Route::get('links', 'LinksController@index');
      
@@ -75,13 +62,3 @@ Route::resource('home', 'BoardsController');
         
     Route::delete('tags/{tag}', 'TagsController@delete');
     
-    //
-    Route::get('messages', 'MessagesController@index');
-     
-    Route::get('messages/{message}', 'MessagesController@show');
-     
-    Route::post('messages','MessagesController@store');
-     
-    Route::put('messages/{message}','MessagesController@update');
-     
-    Route::delete('messages/{message}', 'MessagesController@delete');

@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
 
         <a class="navbar">
-            <a href="{{ url('/home') }}">
+            <a href="{{ url('/boards') }}">
                 <img id="logo" src="/assets/images/cork.png" alt="corkboard"></img>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -112,7 +112,7 @@
                                                          document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            <a class="dropdown-item" href="/home">
+                            <a class="dropdown-item" href="/board">
                                 Dashboard
                             </a>
 
@@ -279,33 +279,20 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group" id="newBoardForm">
-                        <form action="/api/boards" method="POST">
-                            <input type="text" id="postUrl" placeholder="URL">
+                        <form action="{{action('LinksController@store')}}" method="POST">
+                            <input name="url" type="text" id="postUrl" placeholder="URL">
                             <br>
                             <br>
-                            <input type="text" id="postTitle" placeholder="Title">
+                            <input name="title" type="text" id="postTitle" placeholder="Title">
                             <br>
                             <br>
-                            <input type="text" id="postDescription" placeholder="Description">
+                            <input name="description" type="text" id="postDescription" placeholder="Description">
                             <br>
                             <br>
-                            <input type="text" id="postImgUrl" placeholder="Image URL">
+                            <input name="image_url" type="text" id="postImgUrl" placeholder="Image URL">
                             <br>
-                            <br>
-                            <center class="postTags">
-                                <h4>Select Tags: </h4>
-                                <br>
-                                <div class="row filterButtons" style="padding-left: 20px">
-
-                                    <li style="list-style-type: none; padding-right: 20px; font-size: 15px;">
-                                        <label>
-                                            <input value="id" type="checkbox" class="checkboxBtn">{name}</label>
-                                    </li>
-
-                                </div>
-                            </center>
                             <center>
-                                <a href="#">
+                                <a href="board">
                                     <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
                                 </a>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -327,18 +314,15 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group" id="newAnnouncementForm">
-                        <form action="/api/boards" method="POST">
+                        <form action="/messages" method="POST">
                             @csrf
-                            <label for='author' class='col-form-label'>Author</label>
-                            <input type="text" id="postAuthor" placeholder="Author">
-                            <br>
-                            <br>
-                            <label for='message' class='col-form-label'>Message</label>
-                            <textarea class="form-control" id="postMsg" placeholder="Message"></textarea>
+                            
+                            <label for='msg' class='col-form-label'>Message</label>
+                            <textarea class="form-control" id="postMsg" placeholder="Message" name="msg"></textarea>
                             <br>
                             <br>
                             <center>
-                                <a href="#">
+                                <a href="/boards">
                                     <button type="submit" class="btn btn-primary" id="boardSumbit">Submit</button>
                                 </a>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

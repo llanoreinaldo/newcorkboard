@@ -32,13 +32,13 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             
                 <a class="navbar-brand" style="color:white;">
-                <a href="{{ url('/home') }}"><img id="logo" src="/assets/images/cork.png" alt="corkboard"></img> 
+                <a href="{{ url('/boards') }}"><img id="logo" src="/assets/images/cork.png" alt="corkboard"></img> 
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <h1>Welcome to Corkboard!</h1>
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
@@ -66,7 +66,7 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="home">
+                                    <a class="dropdown-item" href="boards">
                                         Dashboard
                                     </a>
 

@@ -10,7 +10,7 @@ class LinksController extends Controller
  
     public function index()
     {
-        return Link::all();
+        return 'Link::all()';
     }
  
     public function show(Link $link)
@@ -22,7 +22,7 @@ class LinksController extends Controller
     {
         $link = Link::create($request->all());
  
-        return response()->json($link, 201);
+        return 'ert';
     }
  
     public function update(Request $request, Link $link)

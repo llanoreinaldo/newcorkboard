@@ -15,8 +15,9 @@ public function up()
 {
     Schema::create('boards', function (Blueprint $table) {
         $table->increments('id');
+        $table->string('hash');
         $table->string('name', 100)->unique();
-        $table->integer('user_id');
+        $table->string('user_id');
         $table->timestamps();
 
     });
