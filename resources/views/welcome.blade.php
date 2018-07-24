@@ -53,10 +53,6 @@
           </div>
       </section>
 
-
-
-
-
     @else
     
     <div id="loginRegister"></div>

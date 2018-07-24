@@ -11,7 +11,7 @@
 </div>
 <div class="annoucementCard-body">
     <p class="card-text animation" style="padding-bottom:10px;">
-     by
+    {$message->msg} by
         <span id="author">{author}</span>
     </p>
 </div>
