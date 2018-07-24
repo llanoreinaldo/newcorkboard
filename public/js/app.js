@@ -36758,7 +36758,50 @@ $('document').ready(function () {
 /* 45 */
 /***/ (function(module, exports) {
 
+var boardUrl = void 0;
+var actualUrl = void 0;
+
 $('document').ready(function () {
+
+    //createboard function
+    $('#createBoard').click(function (e) {
+        e.preventDefault();
+        var boardName = $('#boardName').val().trim();
+        var email = $('#ownerEmail').val().trim();
+        var emailRegex = /^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$)/;
+        if (boardName && emailRegex.test(email)) {
+            $('#boardName').val("");
+            $('#ownerEmail').val("");
+            var data = {
+                name: boardName
+            };
+            $.post("/api/boards/new", data, function (data) {
+                if (data.errors) return console.log(data);
+                $('#modalInvite').html('<a href="' + location.href + 'boards/' + data.id + '">\n                Click Here For Your Board URL</a>');
+                boardUrl = $('#modalInvite').html();
+                actualUrl = $("#modalInvite a").attr("href");
+                $('#modalInvite').attr("data-boardName", data.name);
+                //code for emailing an invite
+                var mailData = {
+                    to: email,
+                    subject: "Welcome to Corkboard",
+                    bodyText: 'Your Board\'s name is: ' + data.name + '\n                    Your access url is: ' + location.href + 'boards/' + data.id,
+                    htmlText: '<h1>Welcome to corkboard!</h1>\n                    <h3>Your board name is: ' + data.name + '</h3>\n                    Your Board URL is: <a href="' + location.href + 'boards/' + data.id + '">\n                    ' + location.href + 'boards/' + data.id + '</a>\n                    <p>Please bookmark your board page and save this email for reference</p>'
+                };
+                //mail(req.body.to, req.body.subject, req.body.bodyText, req.body.htmlText);
+                $.post("/api/mail", mailData, function (data2) {
+                    $('#inviteModal').modal();
+                });
+            });
+        } else {
+            $('#errModalText').html('Must provide Board Name and valid Email address');
+            $('#errorModal').modal();
+        }
+    });
+    $("#skipBtn").click(function (e) {
+        e.preventDefault();
+        location.href = actualUrl;
+    });
 
     $('#sendInvites').click(function (e) {
         e.preventDefault();
@@ -36781,8 +36824,8 @@ $('document').ready(function () {
             var mailData = {
                 to: emailList,
                 subject: 'You\'re invited to a new Corkboard!',
-                bodyText: 'Welcome to Corkboard!\n                    Your Board\'s name is: ' + boardName + '\n                    Your access url is: ' + aTag + '\n                    Message: ' + emailMsg + '\n                    Please bookmark your board page and save this email for reference',
-                htmlText: '<h1>Welcome to corkboard!</h1>\n                    <h3>Your Board\'s name is: ' + boardName + '</h3>\n                    Your Board URL is: <a href="' + aTag + '">' + aTag + '</a><br>\n                    Message from Board Creator: ' + emailMsg + '<br>\n                    Please bookmark your board page and save this email for reference'
+                bodyText: 'Welcome to Corkboard!\n                Your Board\'s name is: ' + boardName + '\n                Your access url is: ' + aTag + '\n                Message: ' + emailMsg + '\n                Please bookmark your board page and save this email for reference',
+                htmlText: '<h1>Welcome to corkboard!</h1>\n                <h3>Your Board\'s name is: ' + boardName + '</h3>\n                Your Board URL is: <a href="' + aTag + '">' + aTag + '</a><br>\n                Message from Board Creator: ' + emailMsg + '<br>\n                Please bookmark your board page and save this email for reference'
             };
             //mail(req.body.to, req.body.subject, req.body.bodyText, req.body.htmlText);
             $.post("/api/mail", mailData, function (data2) {
@@ -36794,22 +36837,6 @@ $('document').ready(function () {
         } else {
             $('#modalInvite').html("<h1>Please Provide Valid Emails</h1>");
         }
-    });
-
-    $('newboard').click(function () {
-        $('#createBoardModal').show();
-        $('#boardCancel').show();
-    });
-
-    $('#boardSubmit').click(function () {
-        $('#newboard').show();
-    });
-
-    $('#boardCancel').click(function () {
-        $('#newBoardForm').hide();
-        $('#boardList').show();
-        $('#newboard').show();
-        $('#boardCancel').hide();
     });
 });
 
