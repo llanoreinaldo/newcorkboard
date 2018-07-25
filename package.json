@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "ajv": "^6.5.2",
+        "docker": "^1.0.0",
         "jss": "^9.8.7",
         "laravel-echo": "^1.4.0",
         "prop-types": "^15.6.2",
