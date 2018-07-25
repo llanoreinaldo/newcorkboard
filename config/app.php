@@ -147,6 +147,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Torann\Hashids\HashidsServiceProvider::class,
+        Snowfire\Beautymail\BeautymailServiceProvider::class,
 
         /*
          * Package Service Providers...

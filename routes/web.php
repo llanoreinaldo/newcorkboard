@@ -61,4 +61,5 @@ Route::delete('boards/{boards}', 'BoardsController@delete');
     Route::put('tags/{tag}','TagsController@update');
         
     Route::delete('tags/{tag}', 'TagsController@delete');
-    
+
+    Route::post('/sendMail', 'IndexController@sendMail');

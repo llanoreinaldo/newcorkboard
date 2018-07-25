@@ -113,12 +113,20 @@
                     <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteModal" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-
+                            <div class="modal-header section-dark">
+                                    <h5 class="modal-title" id="exampleModalLabel">Share Your Board</h5>
+                                </div>
 
                                 <!-- Modal Body -->
                                 <div class="modal-body">
                                     <div class="form-group" id="inviteForm">
-                                        <form>
+                                    <form action="/sendMail" method="POST">
+                                    {{ csrf_field() }}
+                                    <label for="recipient-name" class="col-form-label">Send Invites To Your Board:</label>
+                                    <input class="input_email" id="email" type="email" name="email" placeholder="email1@example.com, email2@example.com " required>
+                                    <label for="instruction" class="col-form-label text-muted">(Use a Comma to Send to Multiple Email Address)</label>
+                                    </form>
+                                        <!-- <form>
                                             <label for="recipient-name" class="col-form-label">Send Invites To Your Board: (Use a Comma to Send to Multiple Email Address)</label>
                                             <input type="email" class="form-control" id="inviteEmails" required="required" placeholder="name@example.com, name2@example.com"
                                                 multiple>
@@ -126,16 +134,12 @@
                                             <label for="message-text" class="col-form-label">Message:</label>
                                             <textarea class="form-control" id="inviteEmailMsg">Join my {{$board->name}} board at http://newcorkboard.com/boards/{{$board->hash}}</textarea>
                                             @else @endif
-                                        </form>
+                                        </form> -->
                                     </div>
                                     <div class="modal-footer">
-                                        <!-- Close Button on Modal -->
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <!-- <span aria-hidden="true">&times;</span> -->
-                                        </button>
                                         <!-- Send Message Button on Modal -->
                                         <button type="button" class="btn btn-secondary" id="closeBtn" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" id="sendInvites">Send Invite</button>
+                                        <button type="sendmailBtn" type="submit" class="btn btn-primary" id="sendInvites">Send Invite</button>
                                     </div>
                                 </div>
                             </div>
