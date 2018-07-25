@@ -9,11 +9,7 @@ use newcorkboard;
 class Message extends Model
 {
     //
-    protected $fillable = ['msg', 'name', 'user_id'];
-
-    public function user(){
-        return $this->belongsTo('App\User');
-    }
+    protected $fillable = ['msg', 'name', 'board_id'];
 
     public function board(){
         return $this->belongsTo('App\Board');
