@@ -1,23 +1,26 @@
 <?php
 
 namespace App\Http\Controllers;
-
+ 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
-use App\Message;
+use Illuminate\Support\Str;
+
+
 use App\Board;
-use App\User;
+use App\Message;
 
 class MessagesController extends Controller
 {
     //
     public function index()
     {
-        $messages = Message::orderBy('created_at','desc');
-        dd($messages);
-
-        return view('boardshow')->with(['messages' => $messages]);
+        //Boards holds all the boards..here we are assigning Board to a variable
+        $messages = Message::all();
+    //Then we return this route to the view home.blade and pass the $boards variable
+    //to the home view AS the name boards!
+        return view('home')->with(['messages' => $messages]);
     }
  
     public function show(Message $message)
@@ -28,10 +31,10 @@ class MessagesController extends Controller
  
     public function store(Request $request)
     {
-        $message = Message::create($request->all());
+        $message = new Message;
  
         // $message->user_id = auth()->user['id'];
-        $message->user_id = $request->user()->id;
+        $message->board_id = $request->board()->id;
         $message->save();
 
         return redirect()->back();

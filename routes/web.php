@@ -40,6 +40,13 @@ Route::post('boards','BoardsController@store');
 Route::put(' boards/{boards}','BoardsController@update');
 Route::delete('boards/{boards}', 'BoardsController@delete');
 
+    //Board Routes
+    // Route::get('boards', 'BoardsController@index');
+    // Route::get('boards/{board}', 'BoardsController@show');
+    // Route::post('boards','BoardsController@store');
+    // Route::put(' boards/{boards}','BoardsController@update');
+    // Route::delete('boards/{boards}', 'BoardsController@delete');
+
         //Link Routes
     Route::get('links', 'LinksController@index');
      
