@@ -1,3 +1,8 @@
+body {
+  background-image: url('/assets/images/image.jpeg');
+  border-image-width: 1350px
+}
+
 li {
   list-style: none;
 }
@@ -13,9 +18,9 @@ a:hover {
 .animation {
   position: relative;
   animation: move 30s infinite;
-  animation-timing-function: ease;
+  animation-timing-function: linear;
   -webkit-animation: move 30s infinite;
-  -webkit-animation-timing-function: ease;
+  -webkit-animation-timing-function: linear;
   animation-delay: 5s
 }
 
@@ -24,7 +29,7 @@ a:hover {
     left: 0px;
   }
   to {
-    left: 100%
+    left: 1350px
   }
 }
 
@@ -33,7 +38,7 @@ a:hover {
     left: 0px;
   }
   to {
-    left: 100%
+    left: 1350px
   }
 }
 
@@ -190,7 +195,7 @@ body {
 }
 
 .card-body {
-  height: 260px;
+  height: 150px;
   background: white;
   /* background: #6985b6; */
   /* opacity: .8; */

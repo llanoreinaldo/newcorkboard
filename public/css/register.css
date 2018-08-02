@@ -9,6 +9,10 @@ html {
   color: #666;
 }
 
+body {
+  background-image: url('/assets/images/image.jpeg');
+}
+
 a {
   color: #0094dd;
 }
